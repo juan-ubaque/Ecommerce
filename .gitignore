@@ -1,2 +1,8 @@
+
+#ignoramos archivos de configuracion de santiago
+.entorno
+/entorno
+
+#ignoramos archivos de configuracion de juan
 .env
 /env
