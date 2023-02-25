@@ -7,7 +7,7 @@ from .forms import form_categorias
 
 def products(request):
     return render (request,'products.html')
-
+    return HttpResponse('Esta es la vista para los prodructos XD')
 
 def categories(request):
     categories = Categories.objects.all()
@@ -42,3 +42,6 @@ def agregarcategorias(request):
     else:
         form = form_categorias()
         return render(request, 'categories.html', {'form':form})
+=======
+    
+
