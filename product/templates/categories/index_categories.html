@@ -1,0 +1,17 @@
+{% extends 'layout/one_layout.html' %}
+
+
+{% block content %}
+
+{% for category in categories %}
+    <p> 
+        {{ category.id }}
+    </p>
+    <p> 
+        {{ category.name_categories }}
+    </p>
+{% endfor %}
+    
+
+{% endblock %}
+
