@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def products(request):
-    return HttpResponse('Esta es la vista para los prodcutos')
+    return HttpResponse('Esta es la vista para los prodructos XD')
