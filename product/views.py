@@ -8,8 +8,9 @@ from django.http import HttpResponse
 
 #Views de Admin
 def Dashboard(request):
-    return HttpResponse('Esta es la vista para el Admin')
-
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request, 'Dashboard.html', context)
 
 
 #View Principal
@@ -23,23 +24,20 @@ def home(request):
 def products(request):
     products = Product.objects.all()
     context={'products':products}
-    return render (request,'home.html',context)
+    return render (request,'Dashboard.html',context)
 
 #Views de agregar productos
 
-def Agregarproducto(request, id):
-    Product = Product.objects.get (id=id)
+def add_products(request):
     if request.method == 'POST':
-        Product = request.POST['Product']
-        category = request.POST['category']
-        name_categories = request.POST['name_categories']
-        description = request.POST['description']
-        price = request.POST['price']
-        Product = Product(Product=Product, category=category, name_categories=name_categories, description=description, price=price)
-        Product.save()
-        return redirect('agregarproducto.html')
+        form = form_Product(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Dashboard')
     else:
-        return render(request, 'Agregarproducto.html')
+        form = form_Product()
+        context = {'form':form}
+        return render(request, 'products/add_products.html', context)
 
 #Views de editar productos
 def Editarproducto(request, id):
