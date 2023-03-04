@@ -1,8 +1,15 @@
 from .forms import form_categorias, form_Product
 from .models import Product, Categories
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 
 # Create your views here.
+
+
+#Views de Admin
+def Dashboard(request):
+    return HttpResponse('Esta es la vista para el Admin')
+
 
 
 #View Principal
@@ -20,6 +27,9 @@ def products(request):
 
 #Views de agregar productos
 def Agregarproducto(request):
+
+def Agregarproducto(request, id):
+    Product = Product.objects.get (id=id)
     if request.method == 'POST':
         Product = request.POST['Product']
         category = request.POST['category']
