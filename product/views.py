@@ -26,7 +26,6 @@ def products(request):
     return render (request,'home.html',context)
 
 #Views de agregar productos
-def Agregarproducto(request):
 
 def Agregarproducto(request, id):
     Product = Product.objects.get (id=id)
