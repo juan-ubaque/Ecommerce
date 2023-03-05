@@ -2,6 +2,7 @@
 	<LInk></LInk>
 </head>
 {% extends 'layout/one_layout.html' %}
+
     {% block content %}
 	<header class="texto-centrado">
 		<h1  style="color: rgb(241, 71, 190);  text-align: center;">Tus productos</h1>
@@ -9,12 +10,30 @@
 	<main>
 		<section id="categorias">
 			<h2>Lista de Categorías</h2>
-			<ul>
-				<!-- Aquí se mostrarán las categorías -->
-			</ul>
-            <button type="button" id="btn-nueva-categoria">Nueva Categoría</button>
+			{% comment %} {% block categories %}  {% endcomment %}
+			<Lista>
+				<h1>Lista de Categorías</h1>
+				<ul>
+					<!-- Aquí se mostrarán las categorías -->
+					{% for c in categories %}
+					<ul id="lista-categorias">
+						<li> {{ c.name_categories }} <button > <a href=" {% url 'edit_categories' %}" > Editar</a></button>
+						<button ><a href= "{% url 'delete_categories' %}">Eliminar</button></li>
+					</ul>
+					{% endfor %}
+				</ul>
+				</Lista>  
+			{% comment %} {% endblock %} {% endcomment %}
 		</section>
 		<section id="productos">
+
+			{% block table %}
+
+			{% endblock %}
+			<button class="btn btn-outline-danger">
+				<a style="text-decoration: none;" href="{% url 'add_products' %}"> Nuevo Producto </a>  
+			</button>
+
             {{ block table}}
 			<h2 style="height: 6%; width: 17%; margin:0%; background-color: rgb(36, 37, 37);color: aliceblue; text-align: center;">Lista de Productos </h2>
 			<table>
@@ -67,9 +86,10 @@
 				<button type="submit" id="btn-guardar-producto">Guardar</button>
 				<button type="button" id="btn-cancelar-producto">Cancelar</button>
 			</form>
+
 		</section>
 	</main>
 	<footer>
-		<p>Diseñado por Santiago Guzman</p>
+		<p>Diseñado por Santiago Guzman que no sabe nada</p>
 	</footer>
 {% endblock %}

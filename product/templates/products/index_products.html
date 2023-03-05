@@ -1,11 +1,33 @@
-{% extends 'layout.html' %}
+{% extends 'dashboard.html' %}
 
-{% block content %}
-    <h1> Hola mundo</h1>
-    <h2>Productos</h2>
-    <ul>
-        {% for product in products %}
-            <li>{{ product.name }}</li>
+{% block table %}
+
+<h2>Lista de Productos </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Categoria</th>
+            <th>Nombre de categoria</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>imagen</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se mostrarán los productos -->
+        {% for p in products %}
+        <tr>
+            <td>{{ p.Product }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.description }}</td>
+            <td>{{ p.price}}</td>
+            <td>{{ p.image }}</td>
+            <td><a class="btn btn-outline-danger" href="{% url "delete_products" p.id %}">Eliminar Producto</a></td>
+            <td><a class="btn btn-outline-warning" href="{% url "edit_products" p.id %}">Editar Producto</a></td>
+        </tr>
         {% endfor %}
-    </ul>    
+    </tbody>
+</table>
 {% endblock %}
