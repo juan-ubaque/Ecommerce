@@ -19,6 +19,43 @@ def home(request):
     context={'home':home}
     return render(request, 'home.html', context)
 
+#Views de categorias
+def categories(request):
+    categories = Categories.objects.all()
+    context={'categories':categories}
+    return render (request,'categories/index_categories.html',context)
+
+# add categorias
+def add_categories(request):
+    if request.method == 'POST':
+        form = form_categorias(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('add_categories')
+    else:
+        form = form_categorias()
+        return render(request, 'add_categories.html', {'form':form})
+
+# edit categorias
+def edit_categories(request, id):
+    categories = Categories.objects.get(id=id)
+    if request.method == 'GET':
+        form = form_categorias(instance=categories)
+    else:
+        form = form_categorias(request.POST, instance=categories)
+        if form.is_valid():
+            form.save()
+        return redirect('edit_categories.html')
+    return render(request, 'edit_categories.html', {'form':form})
+
+# delete categorias
+def delete_categories(request, id):
+    categories = Categories.objects.get(id=id)
+    if request.method == 'POST':
+        categories.delete()
+        return redirect('categories')
+    return render(request, 'delete_categories.html', {'categories':categories})
+
 
 #Views de Productos
 def products(request):
@@ -46,54 +83,17 @@ def delete_products(request, id):
     return redirect('Dashboard.html')
 
 #Views de editar productos
-def Editarproducto(request, id):
+def edit_products(request, id):
     Product = Product.objects.get(id=id)
-    if request.method == 'GET':
-        form = form_Product(instance=Product)
-    else:
+    if request.method == 'POST':
         form = form_Product(request.POST, instance=Product)
         if form.is_valid():
             form.save()
-        return redirect('edit_products.html')
-    return render(request, 'Editarproducto.html', {'form':form})
-
-#Views de categorias
-def categories(request):
-    categories = Categories.objects.all()
-    context={'categories':categories}
-    return render (request,'categories/index_categories.html',context)
-
-# add categorias
-def agregarcategorias(request):
-    if request.method == 'POST':
-        form = form_categorias(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('categories.html')
+            return redirect('Dashboard')
     else:
-        form = form_categorias()
-        return render(request, 'categories.html', {'form':form})
-
-# edit categorias
-def Editarcategorias(request, id):
-    categories = Categories.objects.get(id=id)
-    if request.method == 'GET':
-        form = form_categorias(instance=categories)
-    else:
-        form = form_categorias(request.POST, instance=categories)
-        if form.is_valid():
-            form.save()
-        return redirect('edit_categories.html')
-    return render(request, 'Editarcategorias.html', {'form':form})
-
-# delete categorias
-def delete_categories(request, id):
-    categories = Categories.objects.get(id=id)
-    if request.method == 'POST':
-        categories.delete()
-        return redirect('categories.html')
-    return render(request, 'delete_categories.html', {'categories':categories})
-
+        form = form_Product(instance=Product)
+        context = {'form':form}
+        return render(request, 'products/add_products.html', context)
 
 
 # # update productos

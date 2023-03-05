@@ -1,17 +1,19 @@
-{% extends 'layout/one_layout.html' %}
+{% extends 'dashboard.html' %}
 
+{% block categories %}
 
-{% block content %}
-
-{% for category in categories %}
-    <p> 
-        {{ category.id }}
-    </p>
-    <p> 
-        {{ category.name_categories }}
-    </p>
-{% endfor %}
-    
-
+<Lista>
+<h1>Lista de Categorías</h1>
+<ul>
+    <!-- Aquí se mostrarán las categorías -->
+    {% for c in categories %}
+    <ul id="lista-categorias">
+        <li> {{ c.name_categories }} <button > <a href=" {% url 'edit_categories' %}" > Editar</a></button>
+        <button ><a href= "{% url 'delete_categories' %}">Eliminar</button></li>
+    </ul>
+    {% endfor %}
+</ul>
+</Lista>    
 {% endblock %}
+
 
