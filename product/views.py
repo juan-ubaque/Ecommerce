@@ -38,6 +38,12 @@ def add_products(request):
         form = form_Product()
         context = {'form':form}
         return render(request, 'products/add_products.html', context)
+    
+# delete productos
+def delete_products(request, id):
+    Product = Product.objects.get(id=id)
+    Product.delete()
+    return redirect('Dashboard.html')
 
 #Views de editar productos
 def Editarproducto(request, id):
@@ -88,13 +94,7 @@ def delete_categories(request, id):
         return redirect('categories.html')
     return render(request, 'delete_categories.html', {'categories':categories})
 
-# delete productos
-def delete_products(request, id):
-    Product = Product.objects.get(id=id)
-    if request.method == 'POST':
-        Product.delete()
-        return redirect('products.html')
-    return render(request, 'delete_products.html', {'Product':Product})
+
 
 # # update productos
 # def update_products(request, id):
