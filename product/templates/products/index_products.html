@@ -1,33 +1,38 @@
-{% extends 'dashboard.html' %}
-
-{% block table %}
-
-<h2>Lista de Productos </h2>
-<table>
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Categoria</th>
-            <th>Nombre de categoria</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>imagen</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Aquí se mostrarán los productos -->
-        {% for p in products %}
-        <tr>
-            <td>{{ p.Product }}</td>
-            <td>{{ p.category }}</td>
-            <td>{{ p.description }}</td>
-            <td>{{ p.price}}</td>
-            <td>{{ p.image }}</td>
-            <td><a class="btn btn-outline-danger" href="{% url "delete_products" p.id %}">Eliminar Producto</a></td>
-            <td><a class="btn btn-outline-warning" href="{% url "edit_products" p.id %}">Editar Producto</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+{% block dashboard_table_products %}
+<header class="texto-centrado">
+    <h1 style="color: rgb(241, 71, 190); text-align: center;">Tus productos</h1>
+</header>
+<main>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col" width="120">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in products %}
+                    <tr>
+                        <td>{{ producto.Product }}</td>
+                        <td>{{ producto.description }}</td>
+                        <td>{{ producto.price }}</td>
+                        <td>
+                            <a href="{% url 'edit_products' producto.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{% url 'delete_products' producto.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4" class="texto-centrado">No hay productos para mostrar.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <button type="button" class="btn btn-outline-dark">
+                <a style="text-decoration: none;" href="{% url 'add_products' %}"> agregar tarea </a>
+            </button>
+        </table>
+</main>
 {% endblock %}
+
