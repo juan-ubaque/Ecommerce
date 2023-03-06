@@ -9,22 +9,59 @@ from django.http import HttpResponse
 #Views de Admin
 def Dashboard(request):
     products = Product.objects.all()
-    context = {'products':products}
+    categories = Categories.objects.all()
+    context = {'products':products , 'categories':categories}
     return render(request, 'Dashboard.html', context)
 
 
 #View Principal
 def home(request):
     Ecommerce = Product.objects.all()
-    context={'home':home}
+    context={'Ecommerce':Ecommerce}
     return render(request, 'home.html', context)
+
+#Views de categorias
+'''def categories(request):
+    categories = Categories.objects.all()
+    context={'categories':categories}
+    return render (request,'categories/index_categories.html',context)'''
+
+# add categorias
+def add_categories(request):
+    if request.method == 'POST':
+        form = form_categorias(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Dashboard')
+    else:
+        form = form_categorias()
+        context = {'form':form}
+        return render(request, 'categories/add_categories.html',context)
+
+# edit categorias
+def edit_categories(request, id):
+    categorias = Categories.objects.get(id=id)
+    if request.method == 'POST':
+        form = form_categorias(request.POST,instance=categorias)
+        if form.is_valid():
+            form.save()
+            return redirect('Dashboard')
+    else:
+        form = form_categorias(instance=categorias)
+        context = {'form':form}
+        return render(request, 'categories/edit_categories.html', context)
+# delete categorias
+def delete_categories(request, id):
+    categories = Categories.objects.get(id=id)
+    categories.delete()
+    return redirect('Dashboard')
 
 
 #Views de Productos
-def products(request):
+'''def products(request):
     products = Product.objects.all()
     context={'products':products}
-    return render (request,'Dashboard.html',context)
+    return render (request,'products/index_products.html',context)'''
 
 #Views de agregar productos
 
@@ -40,61 +77,24 @@ def add_products(request):
         return render(request, 'products/add_products.html', context)
 
 #Views de editar productos
-def Editarproducto(request, id):
-    Product = Product.objects.get(id=id)
-    if request.method == 'GET':
-        form = form_Product(instance=Product)
-    else:
-        form = form_Product(request.POST, instance=Product)
-        if form.is_valid():
-            form.save()
-        return redirect('edit_products.html')
-    return render(request, 'Editarproducto.html', {'form':form})
-
-#Views de categorias
-def categories(request):
-    categories = Categories.objects.all()
-    context={'categories':categories}
-    return render (request,'categories/index_categories.html',context)
-
-# add categorias
-def agregarcategorias(request):
+def edit_products(request, id):
+    producto = Product.objects.get(id=id)
     if request.method == 'POST':
-        form = form_categorias(request.POST)
+        form = form_Product(request.POST, instance=producto)
         if form.is_valid():
             form.save()
-            return redirect('categories.html')
+            return redirect('Dashboard')
     else:
-        form = form_categorias()
-        return render(request, 'categories.html', {'form':form})
-
-# edit categorias
-def Editarcategorias(request, id):
-    categories = Categories.objects.get(id=id)
-    if request.method == 'GET':
-        form = form_categorias(instance=categories)
-    else:
-        form = form_categorias(request.POST, instance=categories)
-        if form.is_valid():
-            form.save()
-        return redirect('edit_categories.html')
-    return render(request, 'Editarcategorias.html', {'form':form})
-
-# delete categorias
-def delete_categories(request, id):
-    categories = Categories.objects.get(id=id)
-    if request.method == 'POST':
-        categories.delete()
-        return redirect('categories.html')
-    return render(request, 'delete_categories.html', {'categories':categories})
+        form = form_Product(instance=producto)
+        context = {'form':form}
+        return render(request, 'products/edit_products.html', context)
+        
 
 # delete productos
 def delete_products(request, id):
-    Product = Product.objects.get(id=id)
-    if request.method == 'POST':
-        Product.delete()
-        return redirect('products.html')
-    return render(request, 'delete_products.html', {'Product':Product})
+    delete_product = Product.objects.get(id=id)
+    delete_product.delete()
+    return redirect('Dashboard')
 
 # # update productos
 # def update_products(request, id):

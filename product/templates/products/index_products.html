@@ -1,11 +1,5 @@
-{% extends 'layout.html' %}
+{% extends 'Dashboard.html' %}
+{% block table %}
 
-{% block content %}
-    <h1> Hola mundo</h1>
-    <h2>Productos</h2>
-    <ul>
-        {% for product in products %}
-            <li>{{ product.name }}</li>
-        {% endfor %}
-    </ul>    
+
 {% endblock %}

@@ -3,14 +3,19 @@ from . import views
 
 urlpatterns = [
     path('', views.home ,name='home'),
+    # dashboard
     path('Dashboard/', views.Dashboard , name='Dashboard'),
-    path('products/', views.products, name='products'),
-    path('add_products/', views.add_products, name='add_prodcuts'),
-    path('agregarcategorias/', views.agregarcategorias, name='agregarcategorias'),
-    path('categories/', views.categories, name='categories' ),
-    # path('Editarproducto/<int:id>', views.Editarproducto, name='Editarproducto'),
-    # path('edit_products/', views.edit_products, name='edit_products'),
-    # path('delete/<int:id>', views.delete, name='delete'),
+    # categorias
+    #path('categories/', views.categories, name='categories' ),
+    path('add_categories/', views.add_categories, name='add_categories'),
+    path('delete_categories/<int:id>', views.delete_categories, name='delete_categories'),
+    path ('edit_categories/<int:id>', views.edit_categories, name='edit_categories'),
+    # productos
+    #path('products/', views.products, name='products'),
+    path('edit_products/<int:id>', views.edit_products, name='edit_products'),
+    path('add_products/', views.add_products, name='add_products'),
+    path('delete_products/<int:id>', views.delete_products, name='delete_products'),
+    
     # path('update/<int:id>', views.update, name='update'),
-    # path('delete_categoria/<int:id>', views.delete_categoria, name='delete_categoria'),
+
 ]

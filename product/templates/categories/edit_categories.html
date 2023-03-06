@@ -1,0 +1,13 @@
+{% extends 'layout/one_layout.html' %}
+
+{% block content %}
+<div class="container form-control text-light">
+    <h1>Editar Categoria</h1>
+    <form  method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a class="btn btn-primary" href="{% url 'Dashboard' %}">Guardar cambios</a>
+    </form>
+</div>
+
+{% endblock %}
