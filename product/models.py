@@ -10,12 +10,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 class Categories(models.Model):
     name_categories = models.TextField(blank=True, null=True)
     def __str__(self):
         return self.name_categories
-
+    
 class Product(models.Model):
     Product = models.CharField(max_length=120)
     category = models.ForeignKey('Categories', on_delete=models.CASCADE)
