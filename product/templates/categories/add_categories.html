@@ -1,11 +1,11 @@
-{% extends 'layout.html' %}
+{% extends 'layout/home_layout.html' %}
 
 {% block content %}
-<form action="/product/categories" method="post">
+<form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div style ="<i class="fa fa-columns aria-hidden="true"></i>3
+        {{ form.as_p }}
+    </div>    
+    <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
-
-
 {% endblock %}

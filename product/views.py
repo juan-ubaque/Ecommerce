@@ -2,6 +2,11 @@ from .forms import form_categorias, form_Product
 from .models import Product, Categories
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
+#Views de Productos
+def products(request):
+    products = Product.objects.all()
+    context={'products':products}
+    return render (request,'products/index_products.html',context)
 
 # Create your views here.
 
@@ -29,25 +34,18 @@ def home(request):
 #     context={'categories':categories}
 #     return render (request,'categories/index_categories.html',context)
 
-#Views de Productos
-def products(request):
-    products = Product.objects.all()
-    context={'products':products}
-    return render (request,'products/index_products.html',context)
-
-
-
 # add categorias
 def add_categories(request):
     if request.method == 'POST':
         form = form_categorias(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('add_categories')
+            return redirect('Dashboard')
     else:
         form = form_categorias()
-        return render(request, 'add_categories.html', {'form':form})
-    
+        return render(request, 'categories/add_categories.html', {'form':form})
+
+
 # delete categorias
 def delete_categories(request, id):
     categories = Categories.objects.get(id=id)
@@ -65,9 +63,7 @@ def edit_categories(request, id):
     else:
         form = form_categorias(instance=categorias)
         context = {'form':form}
-        return render(request, 'categories/edit_categories.html', context)
-
-
+        return render(request, 'categories/add_categories.html', context)
 
 
 

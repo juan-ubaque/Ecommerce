@@ -11,7 +11,8 @@ urlpatterns = [
 
     # categorias
     # path('categories/', views.categories, name='categories' ),
-    path('add_categories/', views.add_categories, name='add_categories'),
+    path('categories/add_categories/', views.add_categories, name='add_categories'),
+    path('edit_categories/<int:id>', views.edit_categories, name='edit_categories'),
     path('delete_categories/<int:id>', views.delete_categories, name='delete_categories'),
 
     # productos

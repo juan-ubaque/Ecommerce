@@ -3,6 +3,20 @@
     <h1 style="color: rgb(241, 71, 190); text-align: center;">Tus productos</h1>
 </header>
 <main>
+    <li>
+        <h1>Lista de Categorías</h1>
+        <ul>
+            <!-- Aquí se mostrarán las categorías -->
+            {% for c in categories %}
+            <ul id="lista-categorias">
+                <li> {{ c.name_categories }} </li>
+                <button > <a href=" {% url 'edit_categories' c.id %}" > Editar</a></button>
+                <button ><a href= "{% url 'delete_categories' c.id %}">Eliminar</button></li>
+                
+            </ul>
+            {% endfor %}
+        </ul>
+    </li>  
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -30,7 +44,11 @@
                 {% endfor %}
             </tbody>
             <button type="button" class="btn btn-outline-dark">
-                <a style="text-decoration: none;" href="{% url 'add_products' %}"> agregar tarea </a>
+                <a style="text-decoration: none;" href="{% url 'add_products' %}"> agregar producto </a>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark">
+                <a style="text-decoration: none;" href="{% url 'add_categories'  %}"> agregar categoria </a>
             </button>
         </table>
 </main>

@@ -12,7 +12,8 @@ class Post(models.Model):
         return self.title
 
 class Categories(models.Model):
-    name_categories = models.TextField(blank=True, null=True)
+    name_categories = models.TextField(blank=False, null=False)
+    
     def __str__(self):
         return self.name_categories
     
