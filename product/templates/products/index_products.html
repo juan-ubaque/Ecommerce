@@ -1,56 +1,70 @@
 {% block dashboard_table_products %}
-<header class="texto-centrado">
-    <h1 style="color: rgb(241, 71, 190); text-align: center;">Tus productos</h1>
-</header>
-<main>
-    <li>
-        <h1>Lista de Categorías</h1>
-        <ul>
-            <!-- Aquí se mostrarán las categorías -->
-            {% for c in categories %}
-            <ul id="lista-categorias">
-                <li> {{ c.name_categories }} </li>
-                <button > <a href=" {% url 'edit_categories' c.id %}" > Editar</a></button>
-                <button ><a href= "{% url 'delete_categories' c.id %}">Eliminar</button></li>
-                
+    <div class="container mt-5">
+        <header class="texto-centrado bg-gradient" style="background-image: linear-gradient(to right, #ff00ff, #4b0082);">
+            <h1 class="text-black font-italic bg-gradient" style="background-image: linear-gradient(to right, #ff00ff, #4b0082); text-align: center;">Tus productos</h1>
+        </header>    
+        <main>
+        <div class="row mt-5">
+            <div class="col-md-4">
+            <h2>Lista de Categorías</h2>
+            <button type="button" class="btn btn-success mt-3">
+                <a href="{% url 'add_categories' %}" class="text-decoration-none text-white btn-hover">Agregar categoría</a>
+            </button>                        
+            <ul class="list-group">
+                {% for c in categories %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{% url 'products_by_category' c.id %}">{{ c.name_categories }}</a>
+                        <div class="btn-group" role="group">
+                            <a href="{% url 'edit_categories' c.id %}" class="btn btn-primary">Editar</a>
+                            <a href="{% url 'delete_categories' c.id %}" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </li>
+                {% endfor %}
             </ul>
-            {% endfor %}
-        </ul>
-    </li>  
-        <table class="table table-hover">
-            <thead>
+            </div>
+            <div class="col-md-8">
+            <h2>Lista de Productos</h2>
+            <button type="button" class="btn btn-success mt-3">
+                <a href="{% url 'add_products' %}" class="text-decoration-none text-white btn-hover">Agregar producto</a>
+            </button>
+            <table class="table table-hover">
+                <thead>
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripción</th>
                     <th scope="col">Precio</th>
                     <th scope="col" width="120">Acciones</th>
                 </tr>
-            </thead>
-            <tbody>
-                {% for producto in products %}
-                    <tr>
-                        <td>{{ producto.Product }}</td>
-                        <td>{{ producto.description }}</td>
-                        <td>{{ producto.price }}</td>
-                        <td>
-                            <a href="{% url 'edit_products' producto.id %}" class="btn btn-primary btn-sm">Editar</a>
-                            <a href="{% url 'delete_products' producto.id %}" class="btn btn-danger btn-sm">Eliminar</a>
-                        </td>
-                    </tr>
-                {% empty %}
-                    <tr>
+                </thead>
+                <tbody>
+                    {% if products %}
+                        {% for producto in products %}
+                        <tr>
+                            <td>{{ producto.Product }}</td>
+                            <td>{{ producto.description }}</td>
+                            <td>{{ producto.price }}</td>
+                            <td>
+                            <div class="btn-group" role="group">
+                                <a href="{% url 'edit_products' producto.id %}" class="btn btn-primary">Editar</a>
+                                <a href="{% url 'delete_products' producto.id %}" class="btn btn-danger">Eliminar</a>
+                            </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4" class="texto-centrado">No hay productos para mostrar.</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
                         <td colspan="4" class="texto-centrado">No hay productos para mostrar.</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-            <button type="button" class="btn btn-outline-dark">
-                <a style="text-decoration: none;" href="{% url 'add_products' %}"> agregar producto </a>
-            </button>
-
-            <button type="button" class="btn btn-outline-dark">
-                <a style="text-decoration: none;" href="{% url 'add_categories'  %}"> agregar categoria </a>
-            </button>
-        </table>
-</main>
+                        </tr>
+                    {% endif %}                  
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </main>
+    </div>
 {% endblock %}
 

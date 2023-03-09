@@ -11,10 +11,14 @@
         <li> {{ c.name_categories }}
         <button > <a href=" {% url 'edit_categories' c.id %}" > Editar</a></button>
         <button ><a href= "{% url 'delete_categories' c.id %}">Eliminar</button></li>
+        
     </ul>
     {% endfor %}
 </ul>
-</li>    
+</li>   
+{% for category in categories %}
+    <a href="{% url 'products_by_category' category_id=category.id %}">{{ category.name_categories }}</a>
+{% endfor %}
 {% endblock %}
 
 

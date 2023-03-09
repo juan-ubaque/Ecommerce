@@ -17,7 +17,7 @@ def post_detail(request, year, month, slug):
 #Views de Admin
 def Dashboard(request):
     products = Product.objects.all()
-    categories = Categories.objects.all()
+    categories = Categories.objects.filter()
     context = {'products':products , 'categories':categories}
     return render(request, 'Dashboard.html', context)
 
@@ -99,3 +99,12 @@ def edit_products(request, id):
         context = {'form':form}
         return render(request, 'products/add_products.html', context)
 
+#filter information
+def products_by_category(request, category_id):
+    products = Product.objects.filter(category_id=category_id)
+    categories = Categories.objects.all()
+    context = {
+        'products': products,
+        'categories': categories
+    }
+    return render(request, 'Dashboard.html', context)
