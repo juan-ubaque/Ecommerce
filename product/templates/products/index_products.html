@@ -1,33 +1,70 @@
-{% extends 'dashboard.html' %}
-
-{% block table %}
-
-<h2>Lista de Productos </h2>
-<table>
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Categoria</th>
-            <th>Nombre de categoria</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>imagen</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Aquí se mostrarán los productos -->
-        {% for p in products %}
-        <tr>
-            <td>{{ p.Product }}</td>
-            <td>{{ p.category }}</td>
-            <td>{{ p.description }}</td>
-            <td>{{ p.price}}</td>
-            <td>{{ p.image }}</td>
-            <td><a class="btn btn-outline-danger" href="{% url "delete_products" p.id %}">Eliminar Producto</a></td>
-            <td><a class="btn btn-outline-warning" href="{% url "edit_products" p.id %}">Editar Producto</a></td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+{% block dashboard_table_products %}
+    <div class="container mt-5">
+        <header class="texto-centrado bg-gradient" style="background-image: linear-gradient(to right, #ff00ff, #4b0082);">
+            <h1 class="text-black font-italic bg-gradient" style="background-image: linear-gradient(to right, #ff00ff, #4b0082); text-align: center;">Tus productos</h1>
+        </header>    
+        <main>
+        <div class="row mt-5">
+            <div class="col-md-4">
+            <h2>Lista de Categorías</h2>
+            <button type="button" class="btn btn-success mt-3">
+                <a href="{% url 'add_categories' %}" class="text-decoration-none text-white btn-hover">Agregar categoría</a>
+            </button>                        
+            <ul class="list-group">
+                {% for c in categories %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{% url 'products_by_category' c.id %}">{{ c.name_categories }}</a>
+                        <div class="btn-group" role="group">
+                            <a href="{% url 'edit_categories' c.id %}" class="btn btn-primary">Editar</a>
+                            <a href="{% url 'delete_categories' c.id %}" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
+            <div class="col-md-8">
+            <h2>Lista de Productos</h2>
+            <button type="button" class="btn btn-success mt-3">
+                <a href="{% url 'add_products' %}" class="text-decoration-none text-white btn-hover">Agregar producto</a>
+            </button>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col" width="120">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% if products %}
+                        {% for producto in products %}
+                        <tr>
+                            <td>{{ producto.Product }}</td>
+                            <td>{{ producto.description }}</td>
+                            <td>{{ producto.price }}</td>
+                            <td>
+                            <div class="btn-group" role="group">
+                                <a href="{% url 'edit_products' producto.id %}" class="btn btn-primary">Editar</a>
+                                <a href="{% url 'delete_products' producto.id %}" class="btn btn-danger">Eliminar</a>
+                            </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4" class="texto-centrado">No hay productos para mostrar.</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                        <td colspan="4" class="texto-centrado">No hay productos para mostrar.</td>
+                        </tr>
+                    {% endif %}                  
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </main>
+    </div>
 {% endblock %}
+

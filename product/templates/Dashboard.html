@@ -1,99 +1,19 @@
-<head>
-	<LInk></LInk>
-</head>
-{% extends 'layout/one_layout.html' %}
+{% extends 'layout/home_layout.html' %}
+{% load static %}
 
-    {% block content %}
-	<header class="texto-centrado">
-		<h1  style="color: rgb(241, 71, 190);  text-align: center;">Tus productos</h1>
-	</header>
+{% block content %}
 	<main>
-		<section id="categorias">
-			<h2 class="col-sm-12 text-center">Lista de Categorías</h2>
-			{% comment %} {% block categories %}  {% endcomment %}
-			<Lista>
-				<h1 class="col-sm-12 text-center">Lista de Categorías</h1>
-				<ul>
-					<!-- Aquí se mostrarán las categorías -->
-					{% for c in categories %}
-					<ul id="lista-categorias">
-						<li> {{ c.name_categories }} <button > <a href=" {% url 'edit_categories' %}" > Editar</a></button>
-						<button ><a href= "{% url 'delete_categories' %}">Eliminar</button></li>
-					</ul>
-					{% endfor %}
-				</ul>
-				</Lista>  
-			{% comment %} {% endblock %} {% endcomment %}
-		</section>
-		<section id="productos">
 
-			{% block table %}
+		{% block dashboard_table_products %}
+		{% include 'products/index_products.html' %}
+		{% endblock dashboard_table_products %}
+		
+		{% block categories %}
+		{% endblock categories %}
 
-			{% endblock %}
-
-            {% comment %} {{ block table}} {% endcomment %}
-			<h2 style="height: 6%; width: 100%; margin:0%; color: #000; text-align: center;">Lista de Productos </h2>
-			<div class="d-flex justify-content-center table-responsive" style="margin: 0px; padding: 20px;">
-				<table class="table table-sm w-100 table-bordered">
-					<thead style="width: 100%; margin: 20px; background: #804674; color: #fff;">
-						<tr>
-							<th>Producto</th>
-							<th>Categoria</th>
-							<th>Nombre de categoria</th>
-							<th>Descripción</th>
-							<th>Precio</th>
-							<th>imagen</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- Aquí se mostrarán los productos -->
-						{% for p in products %}
-						<tr>
-							<td>{{ p.Product }}</td>
-							<td>{{ p.category }}</td>
-							<td>{{ p.description }}</td>
-							<td>{{ p.price}}</td>
-							<td>{{ p.image }}</td>
-						</tr>
-						{% endfor %}
-					</tbody>
-				</table>
-			</div>
-			<div class="text-center">
-				<button class="btn btn-outline-primary">
-					<a style="text-decoration: none;" href="{% url 'add_products' %}"> Nuevo Producto </a>  
-				</button>
-			</div>
-            {% comment %} {{ endblock }} {% endcomment %}
-			{% comment %} <button type="button" id="btn-nuevo-producto">Nuevo Producto</button> {% endcomment %}
-		</section>
-		{% comment %} <section id="formulario">
-			<!-- Formulario para categoria -->
-			<form id="form-categoria">
-				<label for="nombre-categoria">Nombre:</label>
-				<input type="text" id="nombre-categoria" name="nombre" required>
-				<input type="hidden" id="id-categoria" name="id">
-				<button type="submit" id="btn-guardar-categoria">Guardar</button>
-				<button type="button" id="btn-cancelar-categoria">Cancelar</button>
-			</form>
-			<!-- Formulario de productos -->
-			<form id="form-producto">
-				<label for="codigo-producto">Código:</label>
-				<input type="text" id="codigo-producto" name="codigo" required>
-				<label for="nombre-producto">Nombre:</label>
-				<input type="text" id="nombre-producto" name="nombre" required>
-				<label for="precio-producto">Precio:</label>
-				<input type="number" id="precio-producto" name="precio" step="0.01" required>
-				<label for="foto-producto">Foto:</label>
-				<input type="file" id="foto-producto" name="foto">
-				<input type="hidden" id="id-producto" name="id">
-				<button type="submit" id="btn-guardar-producto">Guardar</button>
-				<button type="button" id="btn-cancelar-producto">Cancelar</button>
-			</form>
-
-		</section> {% endcomment %}
 	</main>
 	<footer>
-		<p>Diseñado por Santiago Guzman que no sabe nada</p>
+		<p>Diseñado por Santiago Guzman</p>
 	</footer>
-{% endblock %}
+{% endblock content %}
+
