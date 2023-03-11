@@ -26,6 +26,7 @@ urlpatterns = [
     path('post/<int:year>/<int:month>/<slug:slug>/', views.post_detail, name='post_detail'),
 
     path('productos/categoria/<int:category_id>/', views.products_by_category, name='products_by_category'),
-
+    # pasarela de pagos
+    #path('pasarela/', views.pasarela, name='pasarela'),
 
 ]
