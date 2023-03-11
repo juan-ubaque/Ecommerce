@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from pse_checkout import PSECheckout
 
+from widget_tweaks.templatetags.widget_tweaks import render_field
+
 
 #Views de Productos
 def products(request):
