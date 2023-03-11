@@ -1,0 +1,12 @@
+<form action="{% url 'payment' %}" method="POST">
+    {% csrf_token %}
+    <label for="amount">Cantidad:</label>
+    <input type="text" name="amount" required>
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" required>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" required>
+    <label for="reference">Referencia:</label>
+    <input type="text" name="reference" required>
+    <button type="submit">Pagar con PSE</button>
+</form>
