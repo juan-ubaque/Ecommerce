@@ -2,6 +2,7 @@ from .forms import form_categorias, form_Product
 from .models import Product, Categories
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
+from widget_tweaks.templatetags.widget_tweaks import render_field
 #Views de Productos
 def products(request):
     products = Product.objects.all()

@@ -1,6 +1,8 @@
 {% extends 'layout/home_layout.html' %}
 
 {% block content %}
+
+
 <form method="POST" class="bg-light p-3">
     {% csrf_token %}
     <div class="row">
@@ -9,6 +11,6 @@
             {{ form.as_p }}
         </div>    
     </div>
-    <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    <button type="submit" class="btn btn-primary mt-3">salvar</button>
 </form>
 {% endblock %}
