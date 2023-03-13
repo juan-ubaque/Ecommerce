@@ -6,6 +6,9 @@ class form_categorias(forms.ModelForm):
     class Meta:
         model = Categories
         fields = ('name_categories',)
+        widgets = {
+            'name_categories': forms.Select(attrs={'class': 'form-group form-control p-3 mb-2 bg-warning text-dark' }),
+        }
 
 #Formulario de productos
 class form_Product(forms.ModelForm):
