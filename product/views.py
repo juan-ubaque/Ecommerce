@@ -2,6 +2,10 @@ from .forms import form_categorias, form_Product
 from .models import Product, Categories
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
+from pse_checkout import PSECheckout
+from widget_tweaks.templatetags.widget_tweaks import render_field
+from widget_tweaks.templatetags.widget_tweaks import render_field
+
 #Views de Productos
 def products(request):
     products = Product.objects.all()
@@ -108,3 +112,32 @@ def products_by_category(request, category_id):
         'categories': categories
     }
     return render(request, 'Dashboard.html', context)
+
+# payment para PSE Checkout
+def payment(request):
+    if request.method == 'POST':
+        # Obtener la información del pago del formulario
+        amount = request.POST['amount']
+        name = request.POST['name']
+        email = request.POST['email']
+        reference = request.POST['reference']
+
+        # Configurar la instancia de PSECheckout
+        pse_checkout = PSECheckout(login=settings.PSE_LOGIN, secret_key=settings.PSE_SECRET_KEY)
+
+        # Crear la transacción en PSE
+        transaction = pse_checkout.create_transaction(
+            amount=amount,
+            name=name,
+            email=email,
+            reference=reference,
+            currency='COP',
+            description='Ejemplo de pago en Django con PSE',
+            return_url=request.build_absolute_uri(reverse('payment_success'))
+        )
+
+        # Redirigir al usuario a la página de PSE para completar el pago
+        return HttpResponseRedirect(transaction.redirect_url)
+
+    # Si el método de solicitud es GET, mostrar el formulario de pago
+    return render(request, 'payment_form.html')
