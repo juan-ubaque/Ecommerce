@@ -8,7 +8,7 @@
     <!-- Aquí se mostrarán las categorías -->
     {% for c in categories %}
     <ul id="lista-categorias">
-        <li> {{ c.name_categories }}
+        <li class=""> {{ c.name_categories }}
         <button > <a href=" {% url 'edit_categories' c.id %}" > Editar</a></button>
         <button ><a href= "{% url 'delete_categories' c.id %}">Eliminar</button></li>
         
