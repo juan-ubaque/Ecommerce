@@ -528,8 +528,14 @@ body{
   background-color: #BE89BA;
 
 }
+.Ibuscar{
+  padding: auto;
+}
 .fondoLogo{
-  background-color: #BE89BA;
+  
+    flex-shrink: 0;
+    border-radius: 100%;
+    background: "url(static/img/logoXilena.jfif), lightgray 50% / cover no-repeat";
 }
 .Boton{
   background-color: #732579;
