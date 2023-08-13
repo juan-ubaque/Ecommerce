@@ -47,7 +47,7 @@ def add_categories(request):
             return redirect('Dashboard')
     else:
         form = form_categorias()
-        return render(request, 'categories/add_categories.html', {'form':form})
+        return render(request, 'categories/add_categories.html')
 
 
 # delete categorias
