@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color:#D9D9D9;
+}
+
+body {
+	font-family: 'Inter' , sans-serif;
+	max-width: 1200px;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	justify-content: center;
+}
+
+
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 9px;
+	grid-row-gap: 0px;
+}
+
+.container-img {
+	display: flex;
+	background-color: #f7f7f9;
+	
+}
+
+.container-info-product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px;
+	align-items: center;
+}
+
+.container-price {
+	border-bottom: 1px solid #000000;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 40px;
+}
+
+.container-details-product {
+	padding: 30px 0;
+}
+
+footer{
+	padding: 30px;
+	background-color: #eee;
+	margin-top: 50px;
+	color: #222;
+}
+
+.boton{
+    /* estilos tipograficos */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    
+    /* padding, margin y borde */
+    
+    width: max-content; 
+    height: auto;
+    padding: 10px 20px 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+
+    /* propiedades para la animacion  */
+    
+    transition: all 0.20s linear;
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    position: relative;
+    bottom: 0;
+}
+
+.añadir{
+    background: #08c237;
+    box-shadow: 0px 5px 0 #049223;
+}
+.añadir:active{
+    box-shadow:0 0 0 #049223, inset 0 0 5px rgba(0, 0, 0, 0.4);			
+}
+
+p{
+	font-size: 20px;
+	color: #000;
+	margin-bottom: 10px;
+}
