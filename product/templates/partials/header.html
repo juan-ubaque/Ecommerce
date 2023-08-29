@@ -1,8 +1,10 @@
 
 {% load static %}
 
-
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    
 <div class="container-fluid">
+    <div class="container-fluid">
     <!-- inicio barra enlaces  -->
     <div class="menuicono row  py-2 px-xl-5">
         <div class="col-lg-6 d-none d-lg-block">
@@ -40,37 +42,49 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div> 
         <div class="cajaBusqueda col-lg-3 col-6 ">
             <div class="row">
-
-                <div class="col-6"> 
-                    <a href="" class="cajaBusqueda icono-menu col-6">
-                        <box-icon  name='whatsapp-square' type='logo' color='#732579' ></box-icon>
-                    </a>
+                
+                <a href="" class="iconoWhatsapp icono-menu col-1" >
+                    <box-icon  name='whatsapp-square' type='logo' color='#732579' id='iconoWhatsapp' ></box-icon>
+                </a>
+                
+                <h4 href="" class="cajaBusqueda text-dark col-md-6"><span class="text-muted col-md-1">|</span>whatsapp</h4>
+            
+            <!-- Navbar Start -->
+                    <button class="navbar-toggler col-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">collares</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">aretes</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                <!-- fin navbar -->
                 
-                
-                <div class="col-6"> 
-                    <h3 href="" class="cajaBusqueda text-dark col-6">whatsapp</h3>
-                </div>
-                
-            </div
-        </div>
+            </div>
+        
     </div>
+    
+    
 </div>
+</nav>
+
+    
 <!-- header -->
 
 
-<!-- Navbar Start -->
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-        categorias 
-    </button>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">collares</a></li>
-        <li><a class="dropdown-item" href="#"> aretes</a></li>
-        <li><a class="dropdown-item" href="#">paquetes </a></li>
-    </ul>
-</div>
-<!-- fin navbar -->
+
+

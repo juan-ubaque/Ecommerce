@@ -113,6 +113,13 @@ def products_by_category(request, category_id):
     }
     return render(request, 'Dashboard.html', context)
 
+# def crear_recoverPassword(request):
+#     products = Product.objects.all()
+#     context = {'products':products}
+#     return render(request, 'recoverPassword.html')
+
+
+
 # # payment para PSE Checkout
 # def payment(request):
 #     if request.method == 'POST':

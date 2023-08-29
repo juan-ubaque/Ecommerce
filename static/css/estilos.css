@@ -543,3 +543,24 @@ body{
 .whatsapp{
   color: #4e1f51;
 }
+/* navbar */
+.offcanvas {
+  position: absolute;
+  top: 56px; /* Height of navbar */
+  bottom: 0;
+  right: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #343a40;
+  transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  transition-property: right, visibility;
+}
+#iconoWhatsapp{
+  position: relative;
+  width: 1000px;
+  color: #fff;
+}
