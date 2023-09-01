@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% comment %} julian {% endcomment %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Productos - Añadir producto</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="contenedornav">
+            <h2 class="">Administrador de Productos</h2>
+            <!-- <h4>Xilena Rodriguez</h4> -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cambiar contraseña</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cerrar Sesión</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <p class="retornoAdmin"><a href="CRUD.html">Administrador de Productos   > </a>>  Añadir Producto</p>
+    <main>
+        <section class="cabecera">
+            <h3 class="tituloCab">Añadir producto</h3>
+        </section>
+        <form class="form">
+            <div class="form__contendor">
+                <div class="form__grupo">
+                    <label for="nameProd" class="form__label">Nombre de Producto</label>
+                    <input type="text" id="nameProd" class="form__input" placeholder=" ">
+                    
+                </div>
+                <div class="form__grupo">
+                    <label for="categoriaProd" class="form__label">Categoria de Producto</label>
+                    <input type="text" id="categoriaProd" class="form__input" placeholder=" ">
+                    
+                </div>                
+                <div class="form__grupo">
+                    <label for="descripcionProd" class="form__label">Descripcion de Producto</label>
+                    <input type="text" id="descripcionProd" class="form__input" placeholder=" ">
+                    
+                </div>
+                <div class="form__grupo">
+                    <label for="precioProd" class="form__label">Precio de Producto</label>
+                    <input type="number" id="precioProd" class="form__input" placeholder=" ">
+                    
+                </div>
+                <div class="botonFinalizar">
+                    <a href="CRUD.html" class="boton finalizar">
+                        <box-icon name='check' color='#ffffff' ></box-icon>
+                        Finalizar
+                    </a>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

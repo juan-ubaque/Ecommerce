@@ -1,0 +1,26 @@
+{% extends 'layout/home_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <div class="container-img">
+        <img
+            src="public/2022 11.jpeg"
+            alt="imagen-producto"
+        />
+    </div>
+    <div class="container-info-product">
+        <h1 class="titulo">Titulo del producto</h1>
+        <h1>cateogria del producto</h1>
+        <p>
+            descripcion del producto
+            <p class="container-price">precio del producto</p>
+        </p>
+        <a href="#" class="boton añadir">
+            <box-icon name='plus-circle' color='#ffffff'></box-icon>
+            comprar
+        </a>
+    </div>
+</main>
+{% endblock content %}

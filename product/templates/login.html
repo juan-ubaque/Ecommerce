@@ -1,0 +1,59 @@
+{% load widget_tweaks %}
+{% block content %}
+{% load static  %}
+
+
+<div>
+        <div>
+            <img src="img/Logo Xilena Design (1).jpg" class="logologin" alt="">
+        </div>
+        <div class="menulo">
+            <div class="menulogin">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input id="buscar" class="buscar" type="text" placeholder="buscador..." />
+                    <button id="btn" class="btn">Buscar</button>
+                    <div id="panel" class="panel"></div>
+                </div>
+                <a href=""><i class="fa-solid fa-plus" style="color: #fafcff;"></i>agregar</a>
+                <a href="#"><i class="fa-solid fa-bell" style="color: #62135f;"></i></a>
+                <img src="img/Logo Xilena Design (1).jpg" alt="">
+
+            </div>
+        </div>
+        <div>
+            <img src="img/Logo Xilena Design (2).jpg" class="logologin" alt="">
+        </div>
+        
+
+
+        <form class="login">
+            <div class="logi2">
+                <div class="titli">
+                    <h1>ingrese usuario</h1>
+                </div>
+            </div>
+            <div class="formulario">
+                <label for="" >usuario:</label>
+                <input type="text" name="usuario" id="usuario" placeholder="usuario" />
+            </div>
+            <div class="formulario" >
+                <label for="" >contraseña:</label>
+                <input type="password" name="password" id="password" placeholder="password" />
+            </div>
+            <div class="mostrar">
+                <a class="form-recovery" href="#">mostrar contraseña</a>
+                <div class="boton"></div>
+            </div>
+
+            <div class="log">
+                <input type="submit" name="login" value="Login" class="registrar">
+            </div>
+            
+            <p class="message">¿confirmar contraseña? <a href="#">Crear un usuario</a></p>
+
+
+        </form>
+        
+    </div>
+    {% endblock content %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% comment %} julian {% endcomment %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Productos</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+</head>
+<body>
+    <header>
+        <div class="contenedornav">
+            <h2 class="">Administrador de Productos</h2>
+            <!-- <h4>Xilena Rodriguez</h4> -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cambiar contraseña</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cerrar Sesión</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="cabecera">
+            <div class="contenedorCab">
+                <a href="añadirProducto.html" class="boton añadir">
+                    <box-icon name='plus-circle' color='#ffffff'></box-icon>
+                    Añadir Producto
+                </a>
+                <br>
+                <select name="filtro" id="filtro">
+                    <option value="0">Filtrar por</option>
+                    <option value="1">Collares</option>
+                    <option value="2">Aretes</option>
+                </select>
+                <input type="" placeholder="Buscar..." class="filtro">
+            </div>
+        </section>
+        <section class="tabla">
+            <div class="contenedorTab">
+                <table>
+                    <thead class="thead">
+                        <tr class="thead">
+                            <th>N°</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Descripcion del Producto</th>
+                            <th>Categoria</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="imagenes CRUD\2022 1 1.png" class="img"></td>
+                            <td>Nombre del Producto</td>
+                            <td>Descripcion del Producto</td>
+                            <td>Categoria del Producto</td>
+                            <td>Precio del Producto</td>
+                            <td id="accion">
+                                <a href="editarProducto.html" class="boton editar">
+                                    <box-icon name='edit-alt' type='solid' color='#ffffff' ></box-icon>
+                                    Editar
+                                </a>
+                                <a href="#" class="boton borrar">
+                                    <box-icon name='trash' type='solid' color='#ffffff' ></box-icon>
+                                    Borrar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
