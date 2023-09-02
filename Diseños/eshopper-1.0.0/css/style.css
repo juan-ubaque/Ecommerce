@@ -9830,3 +9830,30 @@ opacity: 0.3
  {
    transform: none;
  }
+
+ /*estilo para las tajetas*/
+/* Estilos para el contenedor */
+.container-fluid {
+  background-color: #f1e5e5; /* Fondo gris claro */
+}
+
+/* Estilos para las cajas de contenido */
+.d-flex.align-items-center.justify-content-center.border {
+  border: 8px solid #f8f6f6; /* Cambia el estilo del borde según tus preferencias */
+  background-color: #cbdfe6; /* Fondo blanco */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Estilos para el texto dentro de las cajas */
+.font-weight-semi-bold {
+  font-weight: 700; /* Cambia el peso de la fuente según tus preferencias */
+  color: #000000; /* Texto negro */
+}
+
+/* Estilos para los íconos */
+/* Estilos para los íconos de boxicons */
+#location-plus {
+  font-size: 108px; /* Tamaño de los íconos más grande */
+  color: #8d4545; /* Texto negro */
+}

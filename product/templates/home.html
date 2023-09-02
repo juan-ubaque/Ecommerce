@@ -4,56 +4,171 @@
 
 
 {% block content %} 
-<!--imagen grande carrocel  -->
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}"> 
+</head>
+
+
+
+
+
+
+
+
+<!---->
 <div class="container-slider">
     <div class="slider" id="slider">
         <div class="slider__section">
-            <img src={% static  '/img/Aretes/2022 1.jpeg' %} alt="" class="slider__img">
+            <img src="{% static '/img/Aretes 2/2022.jpg' %}" alt="" class="slider__img">  <!--nunca dejen espacios en los archivos comenzando por ahi no se deben dejar espacios en los archivos les he dicho muchas veces -->
         </div>
         <div class="slider__section">
-            <img src="static/img/Aretes/2022 1.jpe" alt="" class="slider__img">
+            <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" alt="" class="slider__img">
         </div>
         <div class="slider__section">
-            <img src="img/Aretes/2022 1.jpe" alt="" class="slider__img">
+            <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" alt="" class="slider__img">
         </div>
         <div class="slider__section">
-            <img src="img/Aretes/2022 1.jpe" alt="" class="slider__img">
+            <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" alt="" class="slider__img">
         </div>
     </div>
     <div class="slider__btn slider__btn--right">&#62;</div>
     <div class="slider__btn slider__btn--left">&#60;</div>
 </div>
 <!---tres tarjetas-->
+
+
+
 <div class="container-fluid pt-5">
-    <div class="row px-xl-5 pb-3">
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+    <div class="row px-xl-5 pb-3 justify-content-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-12"><box-icon class="tarjeta" name='package' type='solid' style="font-size: 39x;" ></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">PAQUETES</h5>
+                
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style=" color: aqua; padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" type='logo' name='whatsapp'></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">WhatsApp</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" name='location-plus' ></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">UBICACION</h5>
             </div>
         </div>
     </div>
 </div>
 
-<!--tarjetas-->
+<!--productos-->
+<div class="container-fluid pt-5">
+    <div class="text-center mb-4">
+        <div>
+            <h2 class="productos-titulo px-5"><span class="px-2">Productos</span></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4">
+                <div class="producto">
+                    <div class="ui-card">
+                        <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
+                        <div class="description">
+                            <a href="#">anadir al carro</a>
+                            <a href="#">ver producto</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Earrings Product 1</h2>
+                        <p class="card-description">Description of earrings product 1.</p>
+                        <p class="card-price">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repite las columnas anteriores para los otros productos -->
+        </div>
+    </div>
+</div>
 <div class="container-fluid pt-5">
     <div class="text-center mb-4">
         <div>
@@ -62,7 +177,7 @@
         <div class="product-container">
             <div class="producto">
                 <div class="ui-card">
-                    <img src=" img/Aretes/2022 2.jpeg">
+                    <img src="{% static '/img/Aretes_1/2022_1.jpg' %}" > 
                     <div class="description">
                         <a href="#">anadir al carro</a>
                         <a href="#">ver producto</a>
@@ -76,7 +191,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src="img/Aretes/2022 3.jpeg">
+                    <img src="{% static '/img/Aretes_1/2022 2.jpeg' %}"> 
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -90,7 +205,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src="img/Aretes/2022 4.jpeg">
+                    <img src="{% static '/img/Aretes_1/2022 3.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -104,7 +219,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card ">
-                    <img src="img/Aretes/2022 5.jpeg">
+                    <img src="{% static '/img/Aretes_1/2022 4.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -118,7 +233,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src="img/Aretes/2022 1.jpeg">
+                    <img src="{% static '/img/Aretes_1/2022 5.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -132,7 +247,35 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src="img/Aretes/2022 7.jpe">
+                    <img src="{% static '/img/Aretes_1/2022 6.jpeg' %}">
+                    <div class="description">
+                        <a href="#">Add to Cart</a>
+                        <a href="#">View Product</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Earrings Product 1</h2>
+                    <p class="card-description">Description of earrings product 1.</p>
+                    <p class="card-price">$19.99</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="ui-card">
+                    <img src="{% static '/img/Aretes_1/2022 7.jpeg' %}">
+                    <div class="description">
+                        <a href="#">Add to Cart</a>
+                        <a href="#">View Product</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Earrings Product 1</h2>
+                    <p class="card-description">Description of earrings product 1.</p>
+                    <p class="card-price">$19.99</p>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="ui-card">
+                    <img src="{% static '/img/Aretes_1/2022 8.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -148,6 +291,7 @@
 
     </div>
 </div> 
+
 {% endblock %}
 
 
