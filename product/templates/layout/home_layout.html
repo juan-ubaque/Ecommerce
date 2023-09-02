@@ -27,7 +27,8 @@
         <!--link de estilos-->
         <link href=" {% static 'css/estilos.css' %}" rel="stylesheet">
         {% comment %} <link href=" {% static 'css/login.css' %}" rel="stylesheet">
-        <link href=" {% static 'css/newUser.css' %}" rel="stylesheet">
+         {% endcomment %}
+        {% comment %} <link href=" {% static 'css/newUser.css' %}" rel="stylesheet">
         <link href=" {% static 'css/recoverPassword.css' %}" rel="stylesheet">
         <link href=" {% static 'css/productViews.css' %}" rel="stylesheet">
          {% endcomment %}
@@ -36,12 +37,12 @@
     </head>
     <body>
         {% include 'partials/header.html' %}
-
-        {% block content %}
+        <div>
+            {% block content %}
         
-        {% endblock content %}
-
-        {% include 'partials/footer.html' %}  
+            {% endblock content %}
+        </div>
+        {% comment %} {% include 'partials/footer.html' %}   {% endcomment %}
 
 
     {% comment %} <!-- iconos libraries -->

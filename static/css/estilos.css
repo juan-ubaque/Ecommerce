@@ -355,7 +355,7 @@ header{
 /*login menu*/
 
 /*login buscador*/
-.menulogin{
+/* .menulogin{
   display: flex;
   width: 68%; 
   height: 0px; 
@@ -367,7 +367,7 @@ header{
   padding: 30px 30px;
   font-size: 0%;
   align-items: center;
-}
+} */
 
 /* Estilo para el contenedor del campo de búsqueda */
 .search-container {
@@ -524,10 +524,6 @@ body{
   background: rgba(190, 137, 186, 0.43)
 }
 
-.cajaBusqueda{
-  background-color: #BE89BA;
-
-}
 .Ibuscar{
   padding: auto;
 }
@@ -540,9 +536,11 @@ body{
 .Boton{
   background-color: #732579;
 }
-.whatsapp{
-  color: #4e1f51;
+.iconoWhatsapp #whatsapp-icon {
+  font-size: 40px; /* Cambia el tamaño del icono a 32px */
 }
+
+
 /* navbar */
 .offcanvas {
   position: absolute;
@@ -559,8 +557,4 @@ body{
   transition-duration: .3s;
   transition-property: right, visibility;
 }
-#iconoWhatsapp{
-  position: relative;
-  width: 1000px;
-  color: #fff;
-}
+

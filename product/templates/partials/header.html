@@ -1,7 +1,7 @@
 
 {% load static %}
 
-<nav class="navbar navbar-dark bg-dark fixed-top">
+<nav class="navbar ">
     
 <div class="container-fluid">
     <div class="container-fluid">
@@ -11,9 +11,9 @@
             <div class="d-inline-flex align-items-center">
                 <a class="text-dark" href="/recoverPassword.html">FAQs</a>
                 <span class="text-muted px-2">|</span>
-                <a class="text-dark" href="./login.html">Ingresar</a>
+                <a class="text-dark" href="{% url 'login'%}">Ingresar</a>
                 <span class="text-muted px-2">|</span>
-                <a class="text-dark" href="nuwUser.html">Crea tu cuenta</a>
+                <a class="text-dark" href="nuwUser.html">Crear cuenta</a>
                 <span class="text-muted px-2">|</span>
                 <a href="https://www.instagram.com/xilenadesigns/">
                 <box-icon type='logo'  name='instagram'></box-icon></a>
@@ -27,8 +27,8 @@
     <!-- header -->
     <div class="cajaBusqueda row align-items-center py-3 px-xl-5">
         <div class="cajaBusqueda col-lg-3 d-none d-lg-block">
-            <a href="./home.html" class="fondoLogo text-decoration-none">
-                <img class="fondoLogo m-0 display-5 font-weight-semi-bold" src="static/img/logoXilena.jfif" >
+            <a href="/" class="fondoLogo text-decoration-none">
+                <img class="fondoLogo m-0 display-5 font-weight-semi-bold" src= "{% static '/img/logoXilena.jfif' %}" >
             </a>
         </div>
         <div class="fondoLogo col-lg-6 col-6 text-left">
@@ -46,9 +46,10 @@
         <div class="cajaBusqueda col-lg-3 col-6 ">
             <div class="row">
                 
-                <a href="" class="iconoWhatsapp icono-menu col-1" >
-                    <box-icon  name='whatsapp-square' type='logo' color='#732579' id='iconoWhatsapp' ></box-icon>
+                <a href="" class="iconoWhatsapp icono-menu col-1">
+                    <box-icon id="whatsapp-icon" name='whatsapp-square' type='logo' color='#732579'></box-icon>
                 </a>
+                
                 
                 <h4 href="" class="cajaBusqueda text-dark col-md-6"><span class="text-muted col-md-1">|</span>whatsapp</h4>
             

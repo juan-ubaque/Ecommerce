@@ -32,6 +32,13 @@ def home(request):
     context = {'products':products}
     return render(request, 'home.html', context)
 
+#View Principal
+def login(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request,'login.html',context)
+
+
 # #Views de categorias
 # def categories(request):
 #     categories = Categories.objects.all()
