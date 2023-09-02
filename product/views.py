@@ -32,7 +32,7 @@ def home(request):
     context = {'products':products}
     return render(request, 'home.html', context)
 
-#View Principal
+#View login
 def login(request):
     products = Product.objects.all()
     context = {'products':products}

@@ -5,49 +5,37 @@
 
 {% block content %} 
 <!--imagen grande carrocel  -->
-<div class="container-slider">
-    <div class="slider" id="slider">
-        <div class="slider__section">
-            <img src={% static  '/img/Aretes I/2022 1.jpeg' %}alt="" class="slider__img">
-        </div>
-        <div class="slider__section">
-            <img src={% static  '/img/Aretes I/2022 1.jpeg' %} alt="" class="slider__img">
-        </div>
-        <div class="slider__section">
-            <img src={% static  '/img/Aretes I/2022 1.jpeg' %} alt="" class="slider__img">
-        </div>
-        <div class="slider__section">
-            <img src={% static  '/img/Aretes I/2022 1.jpeg' %} alt="" class="slider__img">
-        </div>
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 1">
     </div>
-    <div class="slider__btn slider__btn--right">&#62;</div>
-    <div class="slider__btn slider__btn--left">&#60;</div>
+    <div class="carousel-slide">
+        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 2">
+    </div>
+    <div class="carousel-slide">
+        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 3">
+    </div>
 </div>
 <!---tres tarjetas-->
 <div class="container-fluid pt-5">
-    <div class="row px-xl-5 pb-3">
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+    <div class="row px-xl-5 pb-3 justify-content-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-12"><box-icon class="tarjeta" name='package' type='solid' style="font-size: 39x;" ></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">PAQUETES</h5>
+                
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style=" color: aqua; padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" type='logo' name='whatsapp'></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">WhatsApp</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+        <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
+            <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" name='location-plus' ></box-icon></h1>
+                <h5 class="font-weight-semi-bold m-0">UBICACION</h5>
             </div>
         </div>
     </div>
@@ -62,7 +50,7 @@
         <div class="product-container">
             <div class="producto">
                 <div class="ui-card">
-                    <img src={% static  '/img/Aretes I/2022 1.jpeg' %}>
+                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
                         <a href="#">ver producto</a>
@@ -76,7 +64,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src={% static  '/img/Aretes I/2022 1.jpeg' %}>
+                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -90,7 +78,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src={% static  '/img/Aretes I/2022 1.jpeg' %}>
+                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -104,7 +92,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card ">
-                    <img src={% static  '/img/Aretes I/2022 1.jpeg' %}>
+                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -118,7 +106,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src={% static  '/img/Aretes I/2022 1.jpeg' %}>
+                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
@@ -132,7 +120,7 @@
             </div>
             <div class="producto">
                 <div class="ui-card">
-                    <img src= 'static/img/Aretes I/2022 1.jpeg' >
+                    <img src= "{% static  '/img/Aretes I/2022 1.jpeg' %}" >
                     <div class="description">
                         <a href="#">Add to Cart</a>
                         <a href="#">View Product</a>
