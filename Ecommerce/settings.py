@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'product', # primera app creada de productos
-    'widget_tweaks', # app para poder usar los widgets en los formularios
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
