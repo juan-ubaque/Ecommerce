@@ -32,6 +32,13 @@ def home(request):
     context = {'products':products}
     return render(request, 'home.html', context)
 
+#View login
+def login(request):
+    products = Product.objects.all()
+    context = {'products':products}
+    return render(request,'login.html',context)
+
+
 # #Views de categorias
 # def categories(request):
 #     categories = Categories.objects.all()
@@ -47,7 +54,7 @@ def add_categories(request):
             return redirect('Dashboard')
     else:
         form = form_categorias()
-        return render(request, 'categories/add_categories.html', {'form':form})
+        return render(request, 'categories/add_categories.html')
 
 
 # delete categorias
@@ -112,6 +119,13 @@ def products_by_category(request, category_id):
         'categories': categories
     }
     return render(request, 'Dashboard.html', context)
+
+# def crear_recoverPassword(request):
+#     products = Product.objects.all()
+#     context = {'products':products}
+#     return render(request, 'recoverPassword.html')
+
+
 
 # # payment para PSE Checkout
 # def payment(request):

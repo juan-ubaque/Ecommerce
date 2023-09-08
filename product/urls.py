@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home ,name='home'),
+    path('login/', views.login ,name='login'),
 
     # dashboard
     path('Dashboard/', views.Dashboard , name='Dashboard'),
@@ -28,5 +29,6 @@ urlpatterns = [
     path('productos/categoria/<int:category_id>/', views.products_by_category, name='products_by_category'),
     # pasarela de pagos
     #path('pasarela/', views.pasarela, name='pasarela'),
+    # path('recoverPassword/', views.crear_recoverPassword , name= ('recoverPassword'))
 
 ]

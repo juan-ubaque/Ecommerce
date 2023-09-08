@@ -1,0 +1,36 @@
+{% extends 'layout/home_layout.html' %}
+{% block content %}
+{% load static  %}
+
+
+<div>
+        <form class="login">
+            <div class="logi2">
+                <div class="titli">
+                    <h1>ingrese usuario</h1>
+                </div>
+            </div>
+            <div class="formulario">
+                <label for="" >usuario:</label>
+                <input type="text" name="usuario" id="usuario" placeholder="usuario" />
+            </div>
+            <div class="formulario" >
+                <label for="" >contraseña:</label>
+                <input type="password" name="password" id="password" placeholder="password" />
+            </div>
+            <div class="mostrar">
+                <a class="form-recovery" href="#">mostrar contraseña</a>
+                <div class="boton"></div>
+            </div>
+
+            <div class="log">
+                <input type="submit" name="login" value="Login" class="registrar">
+            </div>
+            
+            <p class="message">¿confirmar contraseña? <a href="#">Crear un usuario</a></p>
+
+
+        </form>
+        
+    </div>
+    {% endblock content %}

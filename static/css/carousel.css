@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+}
