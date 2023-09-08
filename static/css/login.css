@@ -1,242 +1,167 @@
-.login{
-    width: 60%; 
-    height: 10%; 
-    position: relative; 
-    
-    
-    margin: 10%;
-}
-.login{
-    margin: 10%;
-    text-align: center;
-    width: 585px; 
-    height: 523px; 
-    left: 329.82px; 
-    top: 1px; 
-    position: absolute;  
-    box-shadow: 0px 4px 4px rgba(19, 84, 163, 0.25);
-    
-    overflow: hidden; border: 0.50px rgb(83, 31, 117) solid; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    
-}
-.login .logi2  {/*titulo de refistro ====sirve */
-    width: 101%; 
-    height: 8%; 
-    border-bottom: 1px;
-    padding-bottom: 20px; 
-    
-    
-    background: #732579; 
-    border-radius: 90px; 
-    overflow: hidden; 
-    justify-content: center; 
-    align-items: center; 
-    display: inline-flex;
-}
-.logi2 h1{
-    width: 100%; 
-    height: 100%; 
-    align-items: center; 
-    text-align: center;
-    color: black; 
-    font-size: 32px; 
-    font-family: Inter; 
-    word-wrap: break-word;
-}
-form{
-    padding: 1px 3px;
-    border-radius: 30px;
-    background: rgba(190, 137, 186, 0.43);
-    width: 40%;
-    margin: 140px;
-    position: relative; 
-    text-align: center;
-    margin: 10%;
-    text-align: center;
-    left: 400px; 
-    top: 0px; 
-    position: absolute;  
-    box-shadow: 0px 4px 4px rgba(19, 84, 163, 0.25);
-    
-    overflow: hidden; border: 0.50px rgb(83, 31, 117) solid; 
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    
-}
-.formulario{
-    
-    margin-bottom: 60px;
-    padding-bottom: 90px;
-    position: relative;
-}
-form .formulario label{
-    margin-top: 4%;
-    display: block;
-    margin-bottom: 23px;
-    width: 340px; 
-    height: 30px; 
-    left: -1%; 
-    
-    position: absolute; 
-    color: rgb(2, 2, 2); 
-    font-size: 32px; 
-    
-    font-weight: 10%; 
-}
-form .formulario input{
-    width: 300px;
-    height: 24px; 
-    left: 20%; /*corre el imput hacia la derecha*/
-    margin-top: 11%;/*dejar espacio en el texto y el input*/
-    position: absolute; 
-    background: #D9D9D9; 
-    border-radius: 9px;
-    border: 2px solid #f0f0f0;
-    display: block;
-    padding: 10px;
-    font-size: 20px;
+/* Custom styles for your login form */
+.container-login{
+    background-color: #EBEBEB;
 }
 
-.registrar{
-    width: 196px; 
-    height: 41px; 
-    color: black; 
-    font-size: 24px; 
+.logologint {
+    width: 150px;
+    height: auto;
+    border-radius: 60px;
+}
+
+
+/*buscador*/
+
+
+/*termina*/
+
+.login {/*menu*/
+    background-color: rgba(190, 137, 186, 0.43);
+    border-radius: 30px;
+    border: 1px solid #030303;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titliinicia .h1login {
+    border-bottom: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+    
+    padding-bottom: 5px; 
+    border-bottom: 1px solid #000;
+    width: 200%;
+    border: 2PX;
+    border-radius: 20px 20px 5px 5px;
+    padding: 19PX 19PX;
+    font-size: 28px;
+    color: #f7f2f2;
+    text-align: center;
+    background-color:  rgba(115, 37, 121, 0.88);
+    width: 100%; 
+    height: 8%; 
+}
+.logincentra {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente el bloque */
+    max-width: 400px; /* Establecer un ancho máximo para el contenido centrado */
+}
+
+
+
+
+
+
+.formularioini .letra {/*letra*/
+    font-size: 18px;
+    color: #484848;
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 900; 
+    
+}
+.logincntrolvidas{
+    justify-content: flex-start;
+}
+.logincntrolvidas .letra{
+    margin-right: 70px;
+    font-size: 18px;
+    color: #484848;
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    
+
+}
+.loginolvidaste{
+    color: #484848; 
+    font-size: 16px; 
     font-family: Inter; 
     font-weight: 600; 
+    text-decoration: underline;
+
+    
+}
+
+
+
+.formularioini .logininfor {
+    padding: 10px;
+    border: 1px solid #EBEBEB;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+}
+.loginapar{
+    padding: 10px;
+    border: 1px solid #EBEBEB;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+}
+.loginmostrar{
+    color: #484848; 
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 900; 
     word-wrap: break-word;
-    border-radius: 12px;
 }
-.log{
-    left: 1%;
-    margin-top: 6%;
-}
-.botonLogin{/*mostra con buton*/
-    width: 30px; 
-    height: 26px; 
+.boton .mos{
+    width: 25px; 
+    height: 20px; 
     background: #D9D9D9; 
     border-radius: 6px;
 }
-.mostrar{
-    width: 324px; 
-    height: 34px; 
-    justify-content: center; /*para centrAR*/
-    display: inline-flex;
-}
-a{
-
-    color: white; 
+.logincontinuar {
+    width: 50%;
+    border: 4px;
+    border-radius: 7px;
+    background-color: #f7f2f2;
+    color: black; 
     font-size: 20px; 
     font-family: Inter; 
-    font-weight: 600px; 
+    font-weight: 600; 
     word-wrap: break-word;
-    text-decoration: none;
 }
-p{/*desea crear otra cuenta*/
-    margin-top: 5%;
-    font-size: 20px;
-    color: rgb(19, 60, 192);
+.logintexto{
+    color: #484848; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    word-wrap: break-word;
 }
-/*login buscador*/
-.menulogin{
-    display: flex;
-    width: 68%; 
-    height: 0px; 
-    left: 26%; 
-    top: 18px; 
-    position: absolute;
-    background: rgba(190, 137, 186, 0.43); 
-    border-radius: 5px;
-    padding: 30px 30px;
-    font-size: 0%;
-    align-items: center;
+.loginpregunta{
+    color: #484848; 
+    font-size: 18px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    word-wrap: break-word;
 }
 
-/* Estilo para el contenedor del campo de búsqueda */
-.search-container {
-    position: relative;
+
+
+
+
+.form-recovery {
+    color: #020202;
 }
 
-.menulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.search-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    border: 0px solid #971d7d;
-    padding: 0px;
-    border-radius: 4px;
-    flex: 1; /* Permite que el contenedor ocupe todo el espacio disponible */
-    justify-content: flex-end; /* Alinea los elementos a la derecha */
-    margin-right: 20px; /* Ajusta el espacio entre el buscador y los íconos */
-}
 
-.buscar {
-    padding-left: 30px;
-    flex: 0.5;
-    padding: 8px 1px;
-    border-radius: 2px;
-    width: 200px; /* Ajusta el ancho del campo de búsqueda según tus necesidades */
-}
 
-/* Estilos adicionales para el logo y el ícono de casa (puedes ajustarlos según tus necesidades) */
-img {
-    width: 50px;
-    height: 50px;
-    right: 200px;
-}
-
-a .fa-plus{ /*iconos estilos*/
-    font-size: 30px;
-    background-color: #93239b;
-}
-a{
-    color: rgb(8, 8, 8);/* color de la letra agrgar */
-    margin-right: 100px;
-}
-
-a i{
-    font-size: 30px;
+.creatucenta{
     
+    border: 4px;
+    border-radius: 7px;
+    background-color: #f7f2f2;
+    width: 190px; 
+    height: 35px; 
+    text-align: center;
+    color: black; 
+    font-size: 20px; 
+    font-family: Inter; 
+    font-weight: 600; 
+    word-wrap: break-word;
 }
 
 
-
-  /* Estilos para el panel de resultados */
-
-
-  /* Estilos para el icono de búsqueda (Font Awesome) */
-
-.search-icon {
-    position: absolute;
-    top: 50%;
-    color: #732579;
-    margin-left: 10px;
-    transform: translateY(-50%);
-    font-size: 18px; /* Tamaño del icono, puedes ajustarlo según tus necesidades */
+.message {
+    font-size: 16px;
 }
 
-.fondologin{
-    width: 100%; 
-    height: 100%; 
-    position: relative; 
-    background: #EBEBEB;
-}
-.logologin{
-    width: 180px; 
-    height: 120px; 
-    left: 44px; 
-    top: 18px; 
-    position: absolute; 
-    border-radius: 45px
-}
-body{
-    background-color: #EBEBEB;
-}
+/*menu*/
+

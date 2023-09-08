@@ -3,32 +3,56 @@
 {% load static  %}
 
 
-<div>
-        <form class="login">
-            <div class="logi2">
-                <div class="titli">
-                    <h1>ingrese usuario</h1>
+<div class="row justify-content-center align-items-center" style="min-height: 100vh">
+    <div class="col-md-7 col-lg-5"> <!-- Adjust columns based on your design -->
+
+        <form class="login ">
+            <div class="logi2 mb-3">
+                <div class="titliinicia">
+                    <h1 class="h1login m-0">Inicia sesión</h1>
                 </div>
             </div>
-            <div class="formulario">
-                <label for="" >usuario:</label>
-                <input type="text" name="usuario" id="usuario" placeholder="usuario" />
-            </div>
-            <div class="formulario" >
-                <label for="" >contraseña:</label>
-                <input type="password" name="password" id="password" placeholder="password" />
-            </div>
-            <div class="mostrar">
-                <a class="form-recovery" href="#">mostrar contraseña</a>
-                <div class="boton"></div>
-            </div>
+            <div class="logincentra p-4">
+                <div class="formularioini mb-3 ">
+                    <label for="usuario" class="letra mb-1 d-flex align-items-center">E-mail ó celular</label>
+                    <input type="text" name="usuario" id="usuario"  class=" logininfor form-control">
+                </div>
+                <div class="formulario mb-3">
+                    <div class="logincntrolvidas d-flex align-items-center">
+                        <label for="password" class=" letra mb-1 ">contraseña:</label>
+                        <a href="{% url 'recoverPassword'%}" class="loginolvidaste text-dark">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                    <input type="password" name="password" id="password" placeholder="password" class=" loginapar form-control">
+                    
+                </div>
+                <div class="mostrar mb-3 d-flex align-items-center text-center justify-content-center">
+                    <a class="loginmostrar form-recovery mr-5" href="#">mostrar contraseña</a>
+                    <div class="boton">
+                        <button class="mos"></button>
+                    </div>
+                </div>
+                <div class="log mb-3">
+                    <input type="submit" name="login" value="continuar" class="logincontinuar btn ">
+                </div>
+                <div>
+                    <p class=" logintexto mt-4">Al crear una cuenta  aceptas las condiciones de
+                    uso y el aviso de privacidad de xilenadesing.com</p>
+                </div>
+                <div>
+                    <a href="#" class="loginpregunta mt-12 text-dark">¿Eres nuev@ en Xilena Desing? </a>
+                </div>
+                <div>
+                    <button class="creatucenta mt-4">Crea tu cuenta</button>
+                </div>
 
-            <div class="log">
-                <input type="submit" name="login" value="Login" class="registrar">
             </div>
-            
-            <p class="message">¿confirmar contraseña? <a href="#">Crear un usuario</a></p>
+        </form>
+    </div>
+</div>
+</div>\
 
+</div>
 
         </form>
         

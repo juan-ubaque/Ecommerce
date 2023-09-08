@@ -37,8 +37,21 @@ def login(request):
     products = Product.objects.all()
     context = {'products':products}
     return render(request,'login.html',context)
+#View recoverPassword
+def recoverPassword(request):
+    products = Product.objects.all()
+    context = {'recoverPassword':products}
+    return render(request,'recoverPassword.html',context)
 
+def newUser(request):
+    products = Product.objects.all()
+    context = {'newUser':products}
+    return render(request,'newUser.html',context)
 
+def FAQs(request):
+    products = Product.objects.all()
+    context = {'FAQs':products}
+    return render(request,'FAQs.html',context)
 # #Views de categorias
 # def categories(request):
 #     categories = Categories.objects.all()
