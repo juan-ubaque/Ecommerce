@@ -5,17 +5,7 @@
 
 {% block content %} 
 <!--imagen grande carrocel  -->
-<div class="carousel-container">
-    <div class="carousel-slide">
-        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 1">
-    </div>
-    <div class="carousel-slide">
-        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 2">
-    </div>
-    <div class="carousel-slide">
-        <img src="{% static 'img/Aretes I/2022 1.jpeg ' %}" alt="Slide 3">
-    </div>
-</div>
+
 <!---tres tarjetas-->
 <div class="container-fluid pt-5">
     <div class="row px-xl-5 pb-3 justify-content-center">
@@ -53,7 +43,7 @@
                     <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -67,7 +57,7 @@
                     <img src="{% static  '/img/Aretes I/2022 2.jpeg' %}">
                     <div class="description">
                         <a href="#">Agregar carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -81,7 +71,7 @@
                     <img src="{% static  '/img/Aretes I/2022 3.jpeg' %}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -95,7 +85,7 @@
                     <img src="{% static  '/img/Aretes I/2022 4.jpeg' %}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -109,7 +99,7 @@
                     <img src="{% static  '/img/Aretes I/2022 5.jpeg' %}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -123,7 +113,7 @@
                     <img src= "{% static  '/img/collaresReferencia/Ref C22001.jpg' %}" >
                     <div class="description">
                         <a href="#">anadir al carro</a>
-                        <a href="#">Ver producto</a>
+                        <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">

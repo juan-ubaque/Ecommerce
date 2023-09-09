@@ -9,7 +9,7 @@ urlpatterns = [
     path('recoverPassword.html', views.recoverPassword ,name='recoverPassword'),
     path('newUser.html', views.newUser ,name='newUser'),
     path('FAQs.html', views.FAQs ,name='FAQs'),
-    
+    path('productViews.html', views.productViews ,name='productViews'),
 
     # dashboard
     path('Dashboard/', views.Dashboard , name='Dashboard'),

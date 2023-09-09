@@ -52,6 +52,10 @@ def FAQs(request):
     products = Product.objects.all()
     context = {'FAQs':products}
     return render(request,'FAQs.html',context)
+def productViews(request):
+    products = Product.objects.all()
+    context = {'productViews':products}
+    return render(request,'productViews.html',context)
 # #Views de categorias
 # def categories(request):
 #     categories = Categories.objects.all()
