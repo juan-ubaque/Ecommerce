@@ -38,21 +38,24 @@
             <h2 class="productos-titulo px-5"><span class="px-2">Productos</span></h2>
         </div>
         <div class="product-container">
+            {% for producto in products %}
             <div class="producto">
                 <div class="ui-card">
-                    <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}">
+                    <img src="{{ producto.image.url }}">
                     <div class="description">
                         <a href="#">anadir al carro</a>
                         <a href="{% url 'productViews'%}">Ver producto</a>
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="card-title">aretes</h2>
-                    <p class="card-description">Aretes elaborados con: Murano, Mostacilla checa y Herrajes.</p>
-                    <p class="card-price">$33.000</p>
+                    <h2 class="card-title">{{ producto.Product }}</h2>
+                    <p class="card-description">{{ producto.description }}</p>
+                    <p class="card-price">{{ producto.price }}$</p>
                 </div>
             </div>
-            <div class="producto">
+            {% endfor %}
+
+            {% comment %} <div class="producto">
                 <div class="ui-card">
                     <img src="{% static  '/img/Aretes I/2022 2.jpeg' %}">
                     <div class="description">
@@ -121,7 +124,7 @@
                     <p class="card-description">Aretes elaborados con: Murano, Mostacilla checa y Herrajes.</p>
                     <p class="card-price">$33.000</p>
                 </div>
-            </div>
+            </div> {% endcomment %}
         </div><!--hasta aqui va-->
 
     </div>
