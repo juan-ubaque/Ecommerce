@@ -67,6 +67,19 @@
   width: 80%; /* Ancho de la línea */
   height: 4px; /* Grosor de la línea */
   background-color: purple; /* Color morado */
+
+}
+/*estilos para el titulo de productos*/
+
+.productos-titulo {
+  color: rgb(24, 23, 23); /* Color del texto */
+  text-decoration: underline; /* Línea de subrayado */
+  
+  text-align: left; /* Alineación a la izquierda */
+}
+
+.productos-titulo span {
+  padding-left: 70px; /* Espaciado a la izquierda del texto */
 }
 
 /*images los productos*/
@@ -178,6 +191,9 @@ opacity: 0.3
 /*footer*/
 /* HTML Set up */
 
+/footer/
+/* HTML Set up */
+
 
 ul {
   margin: 0px;
@@ -186,9 +202,11 @@ ul {
 .footer-section {
 background: #732579;
 position: relative;
+margin-top: 5%;
 }
-.footer-cta {
-border-bottom: 1px solid #373636;
+.linea {
+border-bottom: 1px solid #228741;/linea/
+margin-top: 1%;
 }
 .single-cta i {
 color: #000000;
@@ -241,6 +259,7 @@ font-size: 20px;
 font-weight: 700;
 font-family: 'Poppins', sans-serif;
 margin-bottom: 20px;
+margin-top: 4%;
 }
 .footer-social-icon a {
 color: #fff;
@@ -269,6 +288,7 @@ font-size: 20px;
 font-weight: 600;
 margin-bottom: 40px;
 position: relative;
+margin-top: 4%;
 }
 .footer-widget-heading h3::before {
 content: "";
@@ -339,6 +359,42 @@ color: #ff5e14;
 font-size: 14px;
 color: #878787;
 }
+
+
+
+/* paginacion anterios siguiente*/
+
+
+.pagination .page-item.active .page-link {
+  background-color: purple;
+  border-color: purple;
+}
+
+.pagination .page-link {
+  color: purple;
+}
+
+.pagination .page-link:hover {
+  background-color: #7e57c2;
+  border-color: #7e57c2;
+}
+
+
+.containerpagi {
+  text-align: center;
+}
+.butpagina{/*botones estilos*/
+  border-color: purple;
+  background-color: purple;;
+  color: #f2f4f7;
+  width: 65px;
+  height: 45px;
+  border-radius: 9px 9px 9px 9px;
+}
+.butpagina h1{
+  color: #f2f4f7;
+}
+
 
 /*menu*/
 header{
@@ -598,3 +654,62 @@ body{
   font-size: 108px; /* Tamaño de los íconos más grande */
   color: #8d4545; /* Texto negro */
 }
+/**/
+.navmenu{
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #D9D9D9;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 1px solid rgba(0,0,0,.1);
+}
+  nav ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    display: inline-table;
+  }
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    nav ul li:hover{background: rgba(0,0,0,.15);}
+    nav ul li:hover > ul{display: block;}
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+      nav ul li a{
+        display: block; 
+        padding: 30px 20px;
+        color: #222; 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      nav ul ul{
+        display: none;
+        background: #fff;
+        position: absolute; 
+        top: 100%;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+      }
+        nav ul ul li{float: none; position: relative;}
+          nav ul ul li a {
+            padding: 15px 30px; 
+            border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+          nav ul ul ul {
+            position: absolute; 
+            left: 100%; 
+            top:0;
+          }

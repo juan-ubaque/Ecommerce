@@ -1,27 +1,33 @@
 
 {% load static %}
 
+
 <nav class="navbar ">
-    
-<div class="container-fluid">
     <div class="container-fluid">
-    <!-- inicio barra enlaces  -->
-    <div class="menuicono row  py-2 px-xl-5">
-        <div class="col-lg-6 d-none d-lg-block">
-            <div class="d-inline-flex align-items-center">
-                <a class="text-dark" href="{% url 'FAQs'%}">FAQs</a>
-                <span class="text-muted px-2">|</span>
-                <a class="text-dark" href="{% url 'login'%}">Ingresar</a>
-                <span class="text-muted px-2">|</span>
-                <a class="text-dark" href="{% url 'newUser'%}">Crear cuenta</a>
-                <span class="text-muted px-2">|</span>
-                <a href="https://www.instagram.com/xilenadesigns/">
-                <box-icon type='logo'  name='instagram'></box-icon></a>
-                <span class="text-muted px-2">|</span>
-                <a href="https://web.facebook.com/xilenadesigns?_rdc=1&_rdr"> <box-icon type='logo' name='facebook-circle' ></box-icon></a>
+        <div class="container-fluid"><!-- inicio barra enlaces -->
+            <div class="navmenu d-flex menuicono row py-2 px-xl-5">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="{% url 'FAQs'%}">FAQs</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="{% url 'login'%}">Ingresar</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="{% url 'newUser'%}">Crear cuenta</a>
+                        <span class="text-muted px-2">|</span>
+                        <a href="https://www.instagram.com/xilenadesigns/"><box-icon type='logo'  name='instagram'></box-icon></a>
+                        <span class="text-muted px-2">|</span>
+                        <a href="https://web.facebook.com/xilenadesigns?_rdc=1&_rdr"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+    
     <!--fin barra de enlaces  -->
 
     <!-- header -->
@@ -70,6 +76,11 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+                
                 <!-- fin navbar -->
                 
             </div>
