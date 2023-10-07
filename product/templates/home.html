@@ -4,32 +4,56 @@
 
 
 {% block content %} 
+<script src="https://kit.fontawesome.com/26f1c55c36.js" crossorigin="anonymous"></script>
 <!--imagen grande carrocel  -->
+<div class="container-slider">
+    <div class="slider" id="slider">
+        <div class="slider_section">
+            <img src="{% static  '/img/Aretes I/2022 4.jpeg' %}" alt="" class="slider__img">
+        </div>
+        <div class="slider_section">
+            <img src="{% static  '/img/collaresReferencia/Ref C22001.jpg' %}" alt="" class="slider__img">
+        </div>
+        <div class="slider_section">
+            <img src="{% static  '/img/Aretes I/2022 3.jpeg' %}" alt="" class="slider__img">
+        </div>
+        <div class="slider_section">
+            <img src="{% static  '/img/Aretes I/2022 4.jpeg' %}" alt="" class="slider__img">
+        </div>
+    </div>
+    <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+    <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+</div>
+<div class="linmorada" ></div>
 
 <!---tres tarjetas-->
 <div class="container-fluid pt-5">
     <div class="row px-xl-5 pb-3 justify-content-center">
         <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
             <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
-                <h1 class="fa text-primary m-0 mr-12"><box-icon class="tarjeta" name='package' type='solid' style="font-size: 39x;" ></box-icon></h1>
+                <h1 class="fa text-primary m-0 mr-12"><i class="fa-solid fa-box" style="color: black;"></i></h1>
                 <h5 class="font-weight-semi-bold m-0">Paquetes</h5>
                 
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
-            <div class="d-flex align-items-center justify-content-center border mb-4" style=" color: aqua; padding: 20px;">
-                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" type='logo' name='whatsapp'></box-icon></h1>
+            <div class="d-flex align-items-center justify-content-center border mb-4" style=" color: #D9D9D9; padding: 20px;">
+                <h1 class="fa text-primary m-0 mr-3"><i class="fa-brands fa-whatsapp" style="color: black;"></i></h1>
                 <h5 class="font-weight-semi-bold m-0">WhatsApp</h5>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 pb-1"> <!-- Cambio a col-lg-4, col-md-4, col-sm-4 -->
             <div class="d-flex align-items-center justify-content-center border mb-4" style="padding: 20px;">
-                <h1 class="fa text-primary m-0 mr-3"><box-icon class="tarjeta" name='location-plus' ></box-icon></h1>
+                <h1 class="fa text-primary m-0 mr-3"><i class="fa-solid fa-location-dot" style="color: black;"></i></h1>
                 <h5 class="font-weight-semi-bold m-0">Ubicacion</h5>
             </div>
         </div>
     </div>
 </div>
+
+
+<!--otra-->
+
 
 <!--tarjetas-->
 <div class="container-fluid pt-5">
@@ -129,6 +153,7 @@
 
     </div>
 </div> 
+<script src="{% static 'js/carrocel.js' %}"></script>
 {% endblock %}
 
 
