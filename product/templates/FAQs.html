@@ -1,0 +1,70 @@
+{% extends 'layout/home_layout.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/faq.css">
+    <title>Preguntas Frecuentes - Xilena Desing</title>
+</head>
+<body>
+    <div class="faq">
+        <h1>En que podemos ayudarte</h1>
+
+        <div class="question">
+            <p>1. ¿Cómo puedo buscar productos en su tienda en línea?</p>
+        </div>
+        <div class="answer">
+            <p>Puede utilizar la barra de búsqueda en la parte superior de la página o navegar por las categorías de productos en nuestro sitio web para encontrar lo que necesita.</p>
+        </div>
+
+        <div class="question">
+            <p>2. ¿Cómo hago un pedido en su tienda en línea?</p>
+        </div>
+        <div class="answer">
+            <p>Para hacer un pedido, simplemente seleccione el producto que desea comprar, agréguelo al carrito de compras y siga los pasos para completar el proceso de pago.</p>
+        </div>
+
+        <!-- Puedes agregar más preguntas y respuestas aquí -->
+
+        <div class="hidden">
+            <div class="question">
+                <p>3. ¿Cuál es su política de devoluciones y reembolsos?</p>
+            </div>
+            <div class="answer">
+                <p>Puede consultar nuestra política de devoluciones y reembolsos en la página correspondiente. En general, ofrecemos un período de devolución de 30 días para productos no utilizados y defectuosos.</p>
+            </div>
+
+            <div class="question">
+                <p>4. ¿Cómo puedo ponerme en contacto con su servicio de atención al cliente?</p>
+            </div>
+            <div class="answer">
+                <p>Puede ponerse en contacto con nuestro servicio de atención al cliente a través del formulario de contacto en nuestro sitio web o por correo electrónico en [correo electrónico de soporte].</p>
+            </div>
+
+            <!-- Agrega más preguntas y respuestas aquí -->
+        </div>
+
+        <button class="show-more-button" onclick="toggleQuestions()">Ver más preguntas</button>
+    </div>
+
+    <script>
+        let questionsVisible = false;
+
+        function toggleQuestions() {
+            const hiddenElements = document.querySelectorAll('.hidden');
+            for (let i = 0; i < hiddenElements.length; i++) {
+                hiddenElements[i].style.display = questionsVisible ? 'none' : 'block';
+            }
+            const button = document.querySelector('.show-more-button');
+            button.textContent = questionsVisible ? 'Ver más preguntas' : 'Ver menos preguntas';
+            questionsVisible = !questionsVisible;
+        }
+    </script>
+</body>
+</html>
+    
+    {% endblock content %}
