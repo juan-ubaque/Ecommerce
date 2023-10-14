@@ -10,10 +10,13 @@ urlpatterns = [
     path('newUser.html', views.newUser ,name='newUser'),
     path('FAQs.html', views.FAQs ,name='FAQs'),
     path('productViews.html', views.productViews ,name='productViews'),
+    # carrito
+    path('carrito/', views.carrito ,name='carrito'),
 
     # dashboard
     path('Dashboard/', views.Dashboard , name='Dashboard'),
-
+    path('CRUD/', views.CRUD , name='CRUD'),
+    path('edit/', views.edit , name='edit'),
     # categorias
     # path('categories/', views.categories, name='categories' ),
     path('categories/add_categories/', views.add_categories, name='add_categories'),

@@ -24,12 +24,23 @@ def Dashboard(request):
     categories = Categories.objects.filter()
     context = {'products':products , 'categories':categories}
     return render(request, 'Dashboard.html', context)
+#Vies de crud
+def CRUD(request):
+    products = Product.objects.all()
+    categories = Categories.objects.filter()
+    context = {'products':products , 'categories':categories}
+    return render(request, 'CRUD.html', context)
 
+#View de editar productos
+def edit(request):
+    products = Product.objects.all()
+    categories = Categories.objects.filter()
+    context = {'edit':products , 'edit':categories}
+    return render(request, 'edit.html', context)
 
 #View Principal
 def home(request):
     products = Product.objects.all()
-
     context = {'products':products}
     return render(request, 'home.html', context)
 
@@ -44,19 +55,31 @@ def recoverPassword(request):
     context = {'recoverPassword':products}
     return render(request,'recoverPassword.html',context)
 
+#View newUser
 def newUser(request):
     products = Product.objects.all()
     context = {'newUser':products}
     return render(request,'newUser.html',context)
 
+#View FAQs
 def FAQs(request):
     products = Product.objects.all()
     context = {'FAQs':products}
     return render(request,'FAQs.html',context)
+
+#View de productos
 def productViews(request):
     products = Product.objects.all()
     context = {'productViews':products}
     return render(request,'productViews.html',context)
+
+#Vius de carrito
+def carrito(request):
+    products = Product.objects.all()
+    context = {'carrito':products}
+    return render(request,'carrito.html',context)
+
+
 # #Views de categorias
 # def categories(request):
 #     categories = Categories.objects.all()
