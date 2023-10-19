@@ -32,11 +32,18 @@ def CRUD(request):
     return render(request, 'CRUD.html', context)
 
 #View de editar productos
-def edit(request):
+def editarProducto(request):
     products = Product.objects.all()
     categories = Categories.objects.filter()
-    context = {'edit':products , 'edit':categories}
-    return render(request, 'edit.html', context)
+    context = {'editarProductos':products , 'editarProductos':categories}
+    return render(request, 'editarProducto.html', context)
+
+#View de añadir productos
+def añadirProducto(request):
+    products = Product.objects.all()
+    categories = Categories.objects.filter()
+    context = {'añadirProductos':products , 'añadirProductos':categories}
+    return render(request, 'añadirProducto.html', context)
 
 #View Principal
 def home(request):
@@ -104,7 +111,7 @@ def delete_categories(request, id):
     categories.delete()
     return redirect('Dashboard')
 
-# edit categorias
+# editar categorias
 def edit_categories(request, id):
     categorias = Categories.objects.get(id=id)
     if request.method == 'POST':

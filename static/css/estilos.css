@@ -48,7 +48,7 @@
   cursor: pointer;
   display: flex; /* Utilizamos flexbox para centrar contenido */
   align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */s
+  justify-content: center; /* Centrar horizontalmente */
 }
 
 .slider__btn:hover {
@@ -194,7 +194,7 @@ opacity: 0.3
 /*footer*/
 /* HTML Set up */
 
-/footer/
+/*footer*/
 /* HTML Set up */
 
 
@@ -208,7 +208,7 @@ position: relative;
 margin-top: 5%;
 }
 .linea {
-border-bottom: 1px solid #228741;/linea/
+border-bottom: 1px solid #228741;   /*linea*/
 margin-top: 1%;
 }
 .single-cta i {

@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Productos</title>
     <link href=" {% static 'css/estilos(julian).css' %}" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
 </head>
 <body>
     <header>
@@ -35,7 +34,7 @@
     <main>
         <section class="cabecera">
             <div class="contenedorCab">
-                <a href="añadirProducto.html" class="boton añadir">
+                <a href="{% url 'añadirProductos' %}" class="boton añadir">
                     <box-icon name='plus-circle' color='#ffffff'></box-icon>
                     Añadir Producto
                 </a>
@@ -71,7 +70,7 @@
                             <td>Categoria del Producto</td>
                             <td>Precio del Producto</td>
                             <td id="accion">
-                                <a href="editarProducto.html" class="boton editar">
+                                <a href="{% url 'editarProductos' %}" class="boton editar">
                                     <box-icon name='edit-alt' type='solid' color='#ffffff' ></box-icon>
                                     Editar
                                 </a>

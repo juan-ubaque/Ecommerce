@@ -16,7 +16,8 @@ urlpatterns = [
     # dashboard
     path('Dashboard/', views.Dashboard , name='Dashboard'),
     path('CRUD/', views.CRUD , name='CRUD'),
-    path('edit/', views.edit , name='edit'),
+    path('editarProductos/', views.editarProducto , name='editarProductos'),
+    path('añadirProductos/', views.añadirProducto , name='añadirProductos'),
     # categorias
     # path('categories/', views.categories, name='categories' ),
     path('categories/add_categories/', views.add_categories, name='add_categories'),

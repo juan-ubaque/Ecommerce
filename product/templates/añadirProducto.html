@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
+
 {% comment %} julian {% endcomment %}
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Productos - Añadir producto</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href=" {% static 'css/estilos(julian).css' %}" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,7 +31,7 @@
             </nav>
         </div>
     </header>
-    <p class="retornoAdmin"><a href="CRUD.html">Administrador de Productos   > </a>>  Añadir Producto</p>
+    <p class="retornoAdmin"><a href="{% url 'CRUD'%}">Administrador de Productos   > </a>>  Añadir Producto</p>
     <main>
         <section class="cabecera">
             <h3 class="tituloCab">Añadir producto</h3>
@@ -57,7 +59,7 @@
                     
                 </div>
                 <div class="botonFinalizar">
-                    <a href="CRUD.html" class="boton finalizar">
+                    <a href="{% url 'CRUD'%}" class="boton finalizar">
                         <box-icon name='check' color='#ffffff' ></box-icon>
                         Finalizar
                     </a>
