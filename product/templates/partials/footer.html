@@ -1,73 +1,43 @@
-
-
 {% load static %}
 
-<div class="footer-section">
-    <div class="container">
-        <div class="footer-cta pt-5 pb-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=" {% static 'css/footer.css' %}" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <footer id="footer">
+        <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="cta-text">
-                            <h4>Encuentranos</h4>
-                            <span>ubicacion del negocio</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="fas fa-phone"></i>
-                        <div class="cta-text">
-                            <h4>Llamanos</h4>
-                            <span>+57 00000000</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4 col-md-4 mb-30">
-                    <div class="single-cta">
-                        <i class="far fa-envelope-open"></i>
-                        <div class="cta-text">
-                            <h4>Envianos un correo electronico</h4>
-                            <span>correo.com</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="linea "></div>
-                <div class="col-xl-4  col-md-4 mb-30">
-                    <div class="footer-widget">
-                        <div class="footer-social-icon">
-                            <span>Siguenos</span>
-                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4  col-md-4 mb-30">
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Subscribete</h3>
-                        </div>
-                        <div class="footer-text mb-25">
-                            
-                            <p>No deje de suscribirse a nuestros nuevos diseños, complete el formulario a continuación.</p>
-                        </div>
-                        <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email">
-                                <button><i class="fab fa-telegram-plane"></i></button>
-                                
-                            </form>
-                            
-                        </div>
-                        
-                    </div>
-                    <a href="{% url 'CRUD'%}">Administrador de producto</a>
+            <div class="col-md-4">
+                <h4>¡Descubre las mejores ofertas!</h4>
+                <p>Explora nuestra tienda en línea y encuentra productos increíbles a precios competitivos.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="wrapper">
+                <h4>Síguenos en las redes</h4>
+                <ul class="social-icons">
+                    <li class="whatsapp"><a href="https://api.whatsapp.com/send?phone=573108683109&text"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="facebook"><a href="https://web.facebook.com/xilenadesigns?_rdc=1&_rdr"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="instagram"><a href="https://www.instagram.com/xilenadesigns/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+                </ul>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
-</div>
+        </footer>
+        
+</body>
+</html>

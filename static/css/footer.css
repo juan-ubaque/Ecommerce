@@ -1,0 +1,114 @@
+#footer {
+    background-color: #732579; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    padding: 40px 0; /* Espaciado interior del footer */
+}
+
+.container {
+    max-width: 1140px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 20px; /* Tamaño del título */
+}
+
+p {
+    font-size: 14px; /* Tamaño del texto */
+    margin: 15px 0; /* Espaciado entre párrafos */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wrapper ul li {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+
+    float: left;
+    transition: all 0.5s ease;
+}
+
+
+/* Style the icons by setting its color and margin-top value to 20px 
+  to align it properly */
+.wrapper ul li .fa {
+    color: #000000;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+    to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li:hover.facebook {
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+
+/* whatsapp */
+.wrapper ul li:hover.whatsapp {
+
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-whatsapp {
+    color: #4dc247;
+    text-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 350px;
+    }
+
+    .wrapper ul li {
+        margin-top: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 340px) {
+    .wrapper {
+        width: 150px;
+    }
+
+    .wrapper ul li {
+        margin: 15px;
+    }
+
+    .wrapper ul li.google {
+        margin-left: 15px;
+    }
+}
