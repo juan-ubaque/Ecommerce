@@ -13,7 +13,7 @@
 <body>
     <div class="cart">
         <div class="product">
-            <img src="Aretes I/2022 1.jpeg" alt="Producto 1">
+            <img src="{% static  '/img/Aretes I/2022 1.jpeg' %}" alt="Producto 1">
             <h3>arete1</h3>
             <p>Precio: $10.000</p>
             <button class="delete-button">Eliminar</button>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="product">
-            <img src="Aretes I/2022 4.jpeg" alt="Producto 2">
+            <img src="{% static  '/img/Aretes I/2022 4.jpeg' %}" alt="Producto 2">
             <h3>arete 2</h3>
             <p>Precio: $15.000</p>
             <button class="delete-button">Eliminar</button>
@@ -33,7 +33,7 @@
         </div>
         <!-- Puedes agregar más productos de manera similar -->
         <div class="product">
-            <img src="Aretes I/2022 10.jpeg" alt="Producto 3">
+            <img src="{% static  '/img/Aretes I/2022 7.jpeg' %}" alt="Producto 3">
             <h3>arete 3</h3>
             <p>Precio: $5.000</p>
             <button class="delete-button">Eliminar</button>
@@ -42,7 +42,7 @@
             <button class="decrement-button">-</button>
         </div>
         <div class="product">
-            <img src="Aretes I/2022 11.jpeg" alt="Producto 4">
+            <img src="{% static  '/img/Aretes I/2022 8.jpeg' %}" alt="Producto 4">
             <h3>arete 4</h3>
             <p>Precio: $20.000</p>
             <button class="delete-button">Eliminar</button>
@@ -51,7 +51,7 @@
             <button class="decrement-button">-</button>
         </div>
         <div class="product">
-            <img src="Aretes I/2022 2.jpeg" alt="Producto 5">
+            <img src="{% static  '/img/Aretes I/2022 6.jpeg' %}" alt="Producto 5">
             <h3>arete 5</h3>
             <p>Precio: $10.000</p>
             <button class="delete-button">Eliminar</button>
@@ -60,7 +60,7 @@
             <button class="decrement-button">-</button>
         </div>
         <div class="product">
-            <img src="Aretes I/2022 3.jpeg" alt="Producto 6">
+            <img src="{% static  '/img/Aretes I/2022 2.jpeg' %}" alt="Producto 6">
             <h3>arete 6</h3>
             <p>Precio: $13.000</p>
             <button class="delete-button">Eliminar</button>
@@ -74,10 +74,48 @@
     </div>
     <div class="button-container">
         <!-- Botón de Comprar con estilo -->
-        <button class="comprar-button">Comprar</button>
+        <button class="comprar-button" src="#">Comprar</button>
     </div>
     <!-- Agrega el enlace a la biblioteca de Bootstrap JavaScript (opcional) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="carrito.js"></script>
+    
+    <script>
+        // Función para eliminar un producto
+document.querySelectorAll('.delete-button').forEach(button => {
+    button.addEventListener('click', () => {
+        button.parentElement.remove();
+        updateTotal();
+    });
+});
+
+// Función para aumentar la cantidad de unidades
+document.querySelectorAll('.increment-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const quantityElement = button.nextElementSibling;
+        quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
+        updateTotal();
+    });
+});
+
+// Función para disminuir la cantidad de unidades
+document.querySelectorAll('.decrement-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const quantityElement = button.previousElementSibling;
+        const quantity = parseInt(quantityElement.textContent);
+        if (quantity > 1) {
+            quantityElement.textContent = quantity - 1;
+            updateTotal();
+        }
+    });
+});
+
+// Función para actualizar el total
+function updateTotal() {
+    const prices = Array.from(document.querySelectorAll('.product p')).map(p => parseFloat(p.textContent.replace('Precio: $', '')));
+    const quantities = Array.from(document.querySelectorAll('.quantity')).map(q => parseInt(q.textContent));
+    const total = prices.reduce((acc, price, index) => acc + price * quantities[index], 0).toFixed(3);
+    document.querySelector('.total p').textContent = `Total: $${total}`;
+}
+    </script>
 </body>
 </html>
